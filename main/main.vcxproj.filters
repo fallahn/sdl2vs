@@ -4,7 +4,4 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="..\SDL2\src\main\android\SDL_android_main.c" />
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="pch.h" />
-  </ItemGroup>
 </Project>

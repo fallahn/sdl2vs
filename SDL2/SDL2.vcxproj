@@ -163,9 +163,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="pch.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="src\atomic\SDL_atomic.c" />
     <ClCompile Include="src\atomic\SDL_spinlock.c" />
     <ClCompile Include="src\audio\android\SDL_androidaudio.c" />
