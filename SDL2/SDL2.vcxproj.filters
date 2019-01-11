@@ -153,9 +153,6 @@
     <ClCompile Include="src\haptic\SDL_haptic.c">
       <Filter>src\haptic</Filter>
     </ClCompile>
-    <ClCompile Include="src\haptic\dummy\SDL_syshaptic.c">
-      <Filter>src\haptic</Filter>
-    </ClCompile>
     <ClCompile Include="src\joystick\SDL_gamecontroller.c">
       <Filter>src\joystick</Filter>
     </ClCompile>
@@ -432,8 +429,26 @@
     <ClCompile Include="src\video\yuv2rgb\yuv_rgb.c">
       <Filter>src\video</Filter>
     </ClCompile>
+    <ClCompile Include="src\haptic\android\SDL_syshaptic.c">
+      <Filter>src\haptic</Filter>
+    </ClCompile>
     <ClCompile Include="src\hidapi\android\hid.cpp">
       <Filter>src\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="src\joystick\hidapi\SDL_hidapijoystick.c">
+      <Filter>src\joystick</Filter>
+    </ClCompile>
+    <ClCompile Include="src\joystick\hidapi\SDL_hidapi_ps4.c">
+      <Filter>src\joystick</Filter>
+    </ClCompile>
+    <ClCompile Include="src\joystick\hidapi\SDL_hidapi_switch.c">
+      <Filter>src\joystick</Filter>
+    </ClCompile>
+    <ClCompile Include="src\joystick\hidapi\SDL_hidapi_xbox360.c">
+      <Filter>src\joystick</Filter>
+    </ClCompile>
+    <ClCompile Include="src\joystick\hidapi\SDL_hidapi_xboxone.c">
+      <Filter>src\joystick</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

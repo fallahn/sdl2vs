@@ -46,42 +46,50 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>Clang_3_8</PlatformToolset>
+    <PlatformToolset>Clang_5_0</PlatformToolset>
+    <AndroidAPILevel>android-23</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>Clang_3_8</PlatformToolset>
+    <PlatformToolset>Clang_5_0</PlatformToolset>
+    <AndroidAPILevel>android-23</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>Clang_3_8</PlatformToolset>
+    <PlatformToolset>Clang_5_0</PlatformToolset>
+    <AndroidAPILevel>android-23</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>Clang_3_8</PlatformToolset>
+    <PlatformToolset>Clang_5_0</PlatformToolset>
+    <AndroidAPILevel>android-23</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>Clang_3_8</PlatformToolset>
+    <PlatformToolset>Clang_5_0</PlatformToolset>
+    <AndroidAPILevel>android-23</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>Clang_3_8</PlatformToolset>
+    <PlatformToolset>Clang_5_0</PlatformToolset>
+    <AndroidAPILevel>android-23</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>Clang_3_8</PlatformToolset>
+    <PlatformToolset>Clang_5_0</PlatformToolset>
+    <AndroidAPILevel>android-23</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>Clang_3_8</PlatformToolset>
+    <PlatformToolset>Clang_5_0</PlatformToolset>
+    <AndroidAPILevel>android-23</AndroidAPILevel>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings" />
@@ -105,47 +113,28 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-    </ClCompile>
+    <ClCompile />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-    </ClCompile>
+    <ClCompile />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
-    <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-    </ClCompile>
+    <ClCompile />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
-    <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-    </ClCompile>
+    <ClCompile />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
-    <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-    </ClCompile>
+    <ClCompile />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
-    <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-    </ClCompile>
+    <ClCompile />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <PreprocessorDefinitions>; GL_GLEXT_PROTOTYPES</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
     </ClCompile>
     <Link>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android</LibraryDependencies>
@@ -153,10 +142,69 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions); GL_GLEXT_PROTOTYPES</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <ClCompile>
+      <PreprocessorDefinitions>; GL_GLEXT_PROTOTYPES</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions); GL_GLEXT_PROTOTYPES</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <ClCompile>
+      <PreprocessorDefinitions>; GL_GLEXT_PROTOTYPES</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions); GL_GLEXT_PROTOTYPES</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>; GL_GLEXT_PROTOTYPES</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions); GL_GLEXT_PROTOTYPES</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
     </ClCompile>
     <Link>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android</LibraryDependencies>
@@ -188,10 +236,15 @@
     <ClCompile Include="src\events\SDL_windowevents.c" />
     <ClCompile Include="src\filesystem\android\SDL_sysfilesystem.c" />
     <ClCompile Include="src\file\SDL_rwops.c" />
-    <ClCompile Include="src\haptic\dummy\SDL_syshaptic.c" />
+    <ClCompile Include="src\haptic\android\SDL_syshaptic.c" />
     <ClCompile Include="src\haptic\SDL_haptic.c" />
     <ClCompile Include="src\hidapi\android\hid.cpp" />
     <ClCompile Include="src\joystick\android\SDL_sysjoystick.c" />
+    <ClCompile Include="src\joystick\hidapi\SDL_hidapijoystick.c" />
+    <ClCompile Include="src\joystick\hidapi\SDL_hidapi_ps4.c" />
+    <ClCompile Include="src\joystick\hidapi\SDL_hidapi_switch.c" />
+    <ClCompile Include="src\joystick\hidapi\SDL_hidapi_xbox360.c" />
+    <ClCompile Include="src\joystick\hidapi\SDL_hidapi_xboxone.c" />
     <ClCompile Include="src\joystick\SDL_gamecontroller.c" />
     <ClCompile Include="src\joystick\SDL_joystick.c" />
     <ClCompile Include="src\loadso\dlopen\SDL_sysloadso.c" />

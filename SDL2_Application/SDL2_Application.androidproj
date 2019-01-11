@@ -48,41 +48,49 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <TargetName>$(RootNamespace)</TargetName>
     <ConfigurationType>Application</ConfigurationType>
+    <AndroidAPILevel>android-23</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
     <UseDebugLibraries>false</UseDebugLibraries>
     <TargetName>$(RootNamespace)</TargetName>
     <ConfigurationType>Application</ConfigurationType>
+    <AndroidAPILevel>android-23</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
     <UseDebugLibraries>true</UseDebugLibraries>
     <TargetName>$(RootNamespace)</TargetName>
     <ConfigurationType>Application</ConfigurationType>
+    <AndroidAPILevel>android-23</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
     <UseDebugLibraries>false</UseDebugLibraries>
     <TargetName>$(RootNamespace)</TargetName>
     <ConfigurationType>Application</ConfigurationType>
+    <AndroidAPILevel>android-23</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <UseDebugLibraries>true</UseDebugLibraries>
     <TargetName>$(RootNamespace)</TargetName>
     <ConfigurationType>Application</ConfigurationType>
+    <AndroidAPILevel>android-23</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <UseDebugLibraries>false</UseDebugLibraries>
     <TargetName>$(RootNamespace)</TargetName>
     <ConfigurationType>Application</ConfigurationType>
+    <AndroidAPILevel>android-23</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
     <UseDebugLibraries>true</UseDebugLibraries>
     <TargetName>$(RootNamespace)</TargetName>
     <ConfigurationType>Application</ConfigurationType>
+    <AndroidAPILevel>android-23</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
     <UseDebugLibraries>false</UseDebugLibraries>
     <TargetName>$(RootNamespace)</TargetName>
     <ConfigurationType>Application</ConfigurationType>
+    <AndroidAPILevel>android-23</AndroidAPILevel>
   </PropertyGroup>
   <Import Project="$(AndroidTargetsPath)\Android.props" />
   <ImportGroup Label="ExtensionSettings" />
