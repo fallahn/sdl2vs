@@ -23,6 +23,10 @@
          -->
     <property file="ant.properties" />
 
+    <!-- Use modern Java source format -->
+    <property name="java.source" value="1.7"/>
+    <property name="java.target" value="1.7"/>
+
     <!-- if sdk.dir was not set from one of the property file, then
          get it from the ANDROID_HOME env var. -->
     <property environment="env" />
