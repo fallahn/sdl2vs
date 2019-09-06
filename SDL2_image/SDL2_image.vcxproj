@@ -100,6 +100,7 @@
     <ClCompile Include="src\jpeg\jutils.c" />
     <ClCompile Include="src\png\arm\arm_init.c" />
     <ClCompile Include="src\png\arm\filter_neon_intrinsics.c" />
+    <ClCompile Include="src\png\arm\palette_neon_intrinsics.c" />
     <ClCompile Include="src\png\png.c" />
     <ClCompile Include="src\png\pngerror.c" />
     <ClCompile Include="src\png\pngget.c" />

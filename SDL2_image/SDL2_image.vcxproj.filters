@@ -258,6 +258,9 @@
     <ClCompile Include="src\jpeg\jquant1.c">
       <Filter>src\jpeg</Filter>
     </ClCompile>
+    <ClCompile Include="src\png\arm\palette_neon_intrinsics.c">
+      <Filter>src\png\arm</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\SDL_image.h">
