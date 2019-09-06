@@ -106,6 +106,8 @@
   <ItemGroup>
     <ProjectReference Include="..\main\main.vcxproj" />
     <ProjectReference Include="..\SDL2\SDL2.vcxproj" />
+    <ProjectReference Include="..\SDL2_image\SDL2_image.vcxproj" />
+    <ProjectReference Include="..\SDL2_ttf\SDL2_ttf.vcxproj" />
   </ItemGroup>
   <Import Project="$(AndroidTargetsPath)\Android.targets" />
   <ImportGroup Label="ExtensionTargets" />

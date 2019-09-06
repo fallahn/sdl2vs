@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2018 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2019 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -285,7 +285,7 @@ private:
             ssize_t count;
             if (msg->FindData("key-utf8", B_INT8_TYPE, (const void**)&keyUtf8, &count) == B_OK) {
                 char text[SDL_TEXTINPUTEVENT_TEXT_SIZE];
-                SDL_zero(text);
+                SDL_zeroa(text);
                 SDL_memcpy(text, keyUtf8, count);
                 SDL_SendKeyboardText(text);
             }

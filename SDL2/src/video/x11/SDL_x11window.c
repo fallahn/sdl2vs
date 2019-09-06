@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2018 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2019 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -393,7 +393,27 @@ X11_CreateWindow(_THIS, SDL_Window * window)
     long fevent = 0;
 
 #if SDL_VIDEO_OPENGL_GLX || SDL_VIDEO_OPENGL_EGL
-    if ((window->flags & SDL_WINDOW_OPENGL) &&
+    const char *forced_visual_id = SDL_GetHint(SDL_HINT_VIDEO_X11_WINDOW_VISUALID);
+
+    if (forced_visual_id != NULL && forced_visual_id[0] != '\0')
+    {
+        XVisualInfo *vi, template;
+        int nvis;
+
+        SDL_zero(template);
+        template.visualid = SDL_strtol(forced_visual_id, NULL, 0);
+        vi = X11_XGetVisualInfo(display, VisualIDMask, &template, &nvis);
+        if (vi) {
+            visual = vi->visual;
+            depth = vi->depth;
+            X11_XFree(vi);
+        }
+        else
+        {
+            return -1;
+        }
+    }
+    else if ((window->flags & SDL_WINDOW_OPENGL) &&
         !SDL_getenv("SDL_VIDEO_X11_VISUALID")) {
         XVisualInfo *vinfo = NULL;
 
