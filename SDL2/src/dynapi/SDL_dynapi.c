@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2018 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2019 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -251,12 +251,12 @@ static SDL_INLINE void *get_sdlapi_entry(const char *fname, const char *sym)
     HMODULE hmodule;
     PFN retval = NULL;
     char error[256];
-    if (DosLoadModule(&error, sizeof(error), fname, &hmodule) == NO_ERROR) {
+    if (DosLoadModule(error, sizeof(error), fname, &hmodule) == NO_ERROR) {
         if (DosQueryProcAddr(hmodule, 0, sym, &retval) != NO_ERROR) {
             DosFreeModule(hmodule);
         }
     }
-    return (void *) retval;
+    return (void *)retval;
 }
 
 #else

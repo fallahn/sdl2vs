@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2018 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2019 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -26,6 +26,7 @@
 #include "SDL_messagebox.h"
 #include "SDL_shape.h"
 #include "SDL_thread.h"
+#include "SDL_metal.h"
 
 #include "SDL_vulkan_internal.h"
 
@@ -276,6 +277,13 @@ struct SDL_VideoDevice
 
     /* * * */
     /*
+     * Metal support
+     */
+    SDL_MetalView (*Metal_CreateView) (_THIS, SDL_Window * window);
+    void (*Metal_DestroyView) (_THIS, SDL_MetalView view);
+
+    /* * * */
+    /*
      * Event manager functions
      */
     void (*PumpEvents) (_THIS);
@@ -405,7 +413,6 @@ typedef struct VideoBootStrap
 /* Not all of these are available in a given build. Use #ifdefs, etc. */
 extern VideoBootStrap COCOA_bootstrap;
 extern VideoBootStrap X11_bootstrap;
-extern VideoBootStrap MIR_bootstrap;
 extern VideoBootStrap DirectFB_bootstrap;
 extern VideoBootStrap WINDOWS_bootstrap;
 extern VideoBootStrap WINRT_bootstrap;

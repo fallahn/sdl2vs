@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2018 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2019 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -442,6 +442,7 @@ typedef struct SDL_TouchFingerEvent
     float dx;           /**< Normalized in the range -1...1 */
     float dy;           /**< Normalized in the range -1...1 */
     float pressure;     /**< Normalized in the range 0...1 */
+    Uint32 windowID;    /**< The window underneath the finger, if any */
 } SDL_TouchFingerEvent;
 
 
@@ -593,6 +594,9 @@ typedef union SDL_Event
     */
     Uint8 padding[56];
 } SDL_Event;
+
+/* Make sure we haven't broken binary compatibility */
+SDL_COMPILE_TIME_ASSERT(SDL_Event, sizeof(SDL_Event) == 56);
 
 
 /* Function prototypes */

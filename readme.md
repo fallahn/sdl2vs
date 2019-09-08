@@ -4,6 +4,12 @@ SDL2 Template Solution
 This solution demonstrates how to set up a basic SDL2 project for Android in Visual Studio 2017. The solution is explained in detail on [my blog](http://trederia.blogspot.com/2017/03/building-sdl2-for-android-with-visual.html).
 
 
+## Modifications 2019-09-07
+
+- Upgraded SDL2 sources to the latest from Mercurial (>2.0.10)
+- Added SDL2-image
+- Added SDL2-ttf
+- Updated compiler and linker flags to be the same for both Debug and Release definitions
 
 ## Modifications 2019-01-11
 

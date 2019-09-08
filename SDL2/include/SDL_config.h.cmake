@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2018 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2019 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -184,6 +184,7 @@
 #cmakedefine HAVE_SEM_TIMEDWAIT 1
 #cmakedefine HAVE_GETAUXVAL 1
 #cmakedefine HAVE_POLL 1
+#cmakedefine HAVE__EXIT 1
 
 #elif __WIN32__
 #cmakedefine HAVE_STDARG_H 1
@@ -285,6 +286,7 @@
 #cmakedefine SDL_JOYSTICK_WINMM @SDL_JOYSTICK_WINMM@
 #cmakedefine SDL_JOYSTICK_USBHID @SDL_JOYSTICK_USBHID@
 #cmakedefine SDL_JOYSTICK_USBHID_MACHINE_JOYSTICK_H @SDL_JOYSTICK_USBHID_MACHINE_JOYSTICK_H@
+#cmakedefine SDL_JOYSTICK_HIDAPI @SDL_JOYSTICK_HIDAPI@
 #cmakedefine SDL_JOYSTICK_EMSCRIPTEN @SDL_JOYSTICK_EMSCRIPTEN@
 #cmakedefine SDL_HAPTIC_DUMMY @SDL_HAPTIC_DUMMY@
 #cmakedefine SDL_HAPTIC_LINUX @SDL_HAPTIC_LINUX@
@@ -292,6 +294,7 @@
 #cmakedefine SDL_HAPTIC_DINPUT @SDL_HAPTIC_DINPUT@
 #cmakedefine SDL_HAPTIC_XINPUT @SDL_HAPTIC_XINPUT@
 #cmakedefine SDL_HAPTIC_ANDROID @SDL_HAPTIC_ANDROID@
+#cmakedefine SDL_LIBUSB_DYNAMIC @SDL_LIBUSB_DYNAMIC@
 
 /* Enable various sensor drivers */
 #cmakedefine SDL_SENSOR_ANDROID @SDL_SENSOR_ANDROID@
@@ -339,9 +342,6 @@
 #cmakedefine SDL_VIDEO_DRIVER_WAYLAND_DYNAMIC_CURSOR @SDL_VIDEO_DRIVER_WAYLAND_DYNAMIC_CURSOR@
 #cmakedefine SDL_VIDEO_DRIVER_WAYLAND_DYNAMIC_XKBCOMMON @SDL_VIDEO_DRIVER_WAYLAND_DYNAMIC_XKBCOMMON@
 
-#cmakedefine SDL_VIDEO_DRIVER_MIR @SDL_VIDEO_DRIVER_MIR@
-#cmakedefine SDL_VIDEO_DRIVER_MIR_DYNAMIC @SDL_VIDEO_DRIVER_MIR_DYNAMIC@
-#cmakedefine SDL_VIDEO_DRIVER_MIR_DYNAMIC_XKBCOMMON @SDL_VIDEO_DRIVER_MIR_DYNAMIC_XKBCOMMON@
 #cmakedefine SDL_VIDEO_DRIVER_EMSCRIPTEN @SDL_VIDEO_DRIVER_EMSCRIPTEN@
 #cmakedefine SDL_VIDEO_DRIVER_X11 @SDL_VIDEO_DRIVER_X11@
 #cmakedefine SDL_VIDEO_DRIVER_X11_DYNAMIC @SDL_VIDEO_DRIVER_X11_DYNAMIC@
@@ -387,6 +387,9 @@
 
 /* Enable Vulkan support */
 #cmakedefine SDL_VIDEO_VULKAN @SDL_VIDEO_VULKAN@
+
+/* Enable Metal support */
+#cmakedefine SDL_VIDEO_METAL @SDL_VIDEO_METAL@
 
 /* Enable system power support */
 #cmakedefine SDL_POWER_ANDROID @SDL_POWER_ANDROID@
