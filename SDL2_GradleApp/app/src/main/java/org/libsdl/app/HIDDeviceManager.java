@@ -103,7 +103,7 @@ public class HIDDeviceManager {
 
     private HIDDeviceManager(final Context context) {
         mContext = context;
-
+        Log.w(TAG, "HIDDeviceManager");
         // Make sure we have the HIDAPI library loaded with the native functions
         try {
             SDL.loadLibrary("hidapi");
@@ -411,7 +411,7 @@ public class HIDDeviceManager {
 
         if (mIsChromebook) {
             mHandler = new Handler(Looper.getMainLooper());
-            mLastBluetoothDevices = new ArrayList<>();
+            mLastBluetoothDevices = new ArrayList<BluetoothDevice>();
 
             // final HIDDeviceManager finalThis = this;
             // mHandler.postDelayed(new Runnable() {
@@ -439,8 +439,8 @@ public class HIDDeviceManager {
             return;
         }
 
-        ArrayList<BluetoothDevice> disconnected = new ArrayList<>();
-        ArrayList<BluetoothDevice> connected = new ArrayList<>();
+        ArrayList<BluetoothDevice> disconnected = new ArrayList<BluetoothDevice>();
+        ArrayList<BluetoothDevice> connected = new ArrayList<BluetoothDevice>();
 
         List<BluetoothDevice> currentConnected = mBluetoothManager.getConnectedDevices(BluetoothProfile.GATT);
 
