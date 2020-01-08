@@ -249,6 +249,7 @@
     <ClCompile Include="src\joystick\hidapi\SDL_hidapi_ps4.c" />
     <ClCompile Include="src\joystick\hidapi\SDL_hidapi_switch.c" />
     <ClCompile Include="src\joystick\hidapi\SDL_hidapi_xbox360.c" />
+    <ClCompile Include="src\joystick\hidapi\SDL_hidapi_xbox360w.c" />
     <ClCompile Include="src\joystick\hidapi\SDL_hidapi_xboxone.c" />
     <ClCompile Include="src\joystick\SDL_gamecontroller.c" />
     <ClCompile Include="src\joystick\SDL_joystick.c" />
@@ -288,6 +289,7 @@
     <ClCompile Include="src\stdlib\SDL_qsort.c" />
     <ClCompile Include="src\stdlib\SDL_stdlib.c" />
     <ClCompile Include="src\stdlib\SDL_string.c" />
+    <ClCompile Include="src\stdlib\SDL_strtokr.c" />
     <ClCompile Include="src\test\SDL_test_assert.c" />
     <ClCompile Include="src\test\SDL_test_common.c" />
     <ClCompile Include="src\test\SDL_test_compare.c" />

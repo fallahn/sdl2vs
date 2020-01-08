@@ -481,7 +481,8 @@ int HID_API_EXPORT hid_exit(void)
 static int is_xbox360(unsigned short vendor_id, const struct libusb_interface_descriptor *intf_desc)
 {
 	static const int XB360_IFACE_SUBCLASS = 93;
-	static const int XB360_IFACE_PROTOCOL = 1; /* Wired only */
+	static const int XB360_IFACE_PROTOCOL = 1; /* Wired */
+	static const int XB360W_IFACE_PROTOCOL = 129; /* Wireless */
 	static const int SUPPORTED_VENDORS[] = {
 		0x0079, /* GPD Win 2 */
 		0x044f, /* Thrustmaster */
@@ -491,8 +492,9 @@ static int is_xbox360(unsigned short vendor_id, const struct libusb_interface_de
 		0x06a3, /* Saitek */
 		0x0738, /* Mad Catz */
 		0x07ff, /* Mad Catz */
-		0x0e6f, /* Unknown */
+		0x0e6f, /* PDP */
 		0x0f0d, /* Hori */
+		0x1038, /* SteelSeries */
 		0x11c9, /* Nacon */
 		0x12ab, /* Unknown */
 		0x1430, /* RedOctane */
@@ -505,10 +507,10 @@ static int is_xbox360(unsigned short vendor_id, const struct libusb_interface_de
 		0x24c6, /* PowerA */
 	};
 
-	if (intf_desc->bInterfaceNumber == 0 &&
-	    intf_desc->bInterfaceClass == LIBUSB_CLASS_VENDOR_SPEC &&
+	if (intf_desc->bInterfaceClass == LIBUSB_CLASS_VENDOR_SPEC &&
 	    intf_desc->bInterfaceSubClass == XB360_IFACE_SUBCLASS &&
-	    intf_desc->bInterfaceProtocol == XB360_IFACE_PROTOCOL) {
+	    (intf_desc->bInterfaceProtocol == XB360_IFACE_PROTOCOL ||
+	     intf_desc->bInterfaceProtocol == XB360W_IFACE_PROTOCOL)) {
 		int i;
 		for (i = 0; i < sizeof(SUPPORTED_VENDORS)/sizeof(SUPPORTED_VENDORS[0]); ++i) {
 			if (vendor_id == SUPPORTED_VENDORS[i]) {
@@ -526,10 +528,11 @@ static int is_xboxone(unsigned short vendor_id, const struct libusb_interface_de
         static const int SUPPORTED_VENDORS[] = {
             0x045e, /* Microsoft */
             0x0738, /* Mad Catz */
-            0x0e6f, /* Unknown */
+            0x0e6f, /* PDP */
             0x0f0d, /* Hori */
             0x1532, /* Razer Wildcat */
             0x24c6, /* PowerA */
+            0x2e24, /* Hyperkin */
         };
 
 	if (intf_desc->bInterfaceNumber == 0 &&
@@ -553,13 +556,7 @@ static int should_enumerate_interface(unsigned short vendor_id, const struct lib
 
 	/* Also enumerate Xbox 360 controllers */
 	if (is_xbox360(vendor_id, intf_desc))
-	{
-		/* hid_write() to Xbox 360 controllers doesn't seem to work on Linux:
-		   - xpad 1-2:1.0: xpad_try_sending_next_out_packet - usb_submit_urb failed with result -2
-		   Xbox 360 controller support is good on Linux anyway, so we'll ignore this for now.
 		return 1;
-		*/
-	}
 
 	/* Also enumerate Xbox One controllers */
 	if (is_xboxone(vendor_id, intf_desc))
@@ -939,7 +936,10 @@ hid_device * HID_API_EXPORT hid_open_path(const char *path, int bExclusive)
 		int i,j,k;
 		libusb_get_device_descriptor(usb_dev, &desc);
 
-		if (libusb_get_active_config_descriptor(usb_dev, &conf_desc) < 0)
+		res = libusb_get_active_config_descriptor(usb_dev, &conf_desc);
+		if (res < 0)
+			libusb_get_config_descriptor(usb_dev, 0, &conf_desc);
+		if (!conf_desc)
 			continue;
 		for (j = 0; j < conf_desc->bNumInterfaces; j++) {
 			const struct libusb_interface *intf = &conf_desc->interface[j];
@@ -1053,17 +1053,17 @@ hid_device * HID_API_EXPORT hid_open_path(const char *path, int bExclusive)
 int HID_API_EXPORT hid_write(hid_device *dev, const unsigned char *data, size_t length)
 {
 	int res;
-	int report_number = data[0];
-	int skipped_report_id = 0;
-
-	if (report_number == 0x0) {
-		data++;
-		length--;
-		skipped_report_id = 1;
-	}
-
 
 	if (dev->output_endpoint <= 0) {
+		int report_number = data[0];
+		int skipped_report_id = 0;
+
+		if (report_number == 0x0) {
+			data++;
+			length--;
+			skipped_report_id = 1;
+		}
+
 		/* No interrupt out endpoint. Use the Control Endpoint */
 		res = libusb_control_transfer(dev->device_handle,
 			LIBUSB_REQUEST_TYPE_CLASS|LIBUSB_RECIPIENT_INTERFACE|LIBUSB_ENDPOINT_OUT,
@@ -1092,9 +1092,6 @@ int HID_API_EXPORT hid_write(hid_device *dev, const unsigned char *data, size_t 
 
 		if (res < 0)
 			return -1;
-
-		if (skipped_report_id)
-			actual_length++;
 
 		return actual_length;
 	}
@@ -1433,7 +1430,7 @@ static struct lang_map_entry lang_map[] = {
 	LANG("Lithuanian", "lt", 0x0427),
 	LANG("F.Y.R.O. Macedonia", "mk", 0x042F),
 	LANG("Malay - Malaysia", "ms_my", 0x043E),
-	LANG("Malay – Brunei", "ms_bn", 0x083E),
+	LANG("Malay ??? Brunei", "ms_bn", 0x083E),
 	LANG("Maltese", "mt", 0x043A),
 	LANG("Marathi", "mr", 0x044E),
 	LANG("Norwegian - Bokml", "no_no", 0x0414),
@@ -1484,7 +1481,7 @@ static struct lang_map_entry lang_map[] = {
 	LANG("Ukrainian", "uk", 0x0422),
 	LANG("Urdu", "ur", 0x0420),
 	LANG("Uzbek - Cyrillic", "uz_uz", 0x0843),
-	LANG("Uzbek – Latin", "uz_uz", 0x0443),
+	LANG("Uzbek ??? Latin", "uz_uz", 0x0443),
 	LANG("Vietnamese", "vi", 0x042A),
 	LANG("Xhosa", "xh", 0x0434),
 	LANG("Yiddish", "yi", 0x043D),

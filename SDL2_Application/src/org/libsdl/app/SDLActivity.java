@@ -137,12 +137,12 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
      */
     protected String[] getLibraries() {
         return new String[] {
-            //"hidapi",
+            "hidapi",
             "SDL2",
-            // "SDL2_image",
+            "SDL2_image",
             // "SDL2_mixer",
             // "SDL2_net",
-            // "SDL2_ttf",
+            "SDL2_ttf",
             "main"
         };
     }
@@ -453,7 +453,9 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
 
         // Default system back button behavior.
-        super.onBackPressed();
+        if (!isFinishing()) {
+            super.onBackPressed();
+        }
     }
 
     // Called by JNI from SDL.
@@ -466,7 +468,9 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                SDLActivity.this.superOnBackPressed();
+                if (!SDLActivity.this.isFinishing()) {
+                    SDLActivity.this.superOnBackPressed();
+                }
             }
         });
     }
@@ -633,6 +637,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
                     imm.hideSoftInputFromWindow(mTextEdit.getWindowToken(), 0);
 
                     mScreenKeyboardShown = false;
+
+                    mSurface.requestFocus();
                 }
                 break;
             case COMMAND_SET_KEEP_SCREEN_ON:

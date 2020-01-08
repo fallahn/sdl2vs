@@ -26,6 +26,8 @@
 #include "SDL_events.h"
 #include "SDL_androidkeyboard.h"
 #include "SDL_androidwindow.h"
+#include "../SDL_sysvideo.h"
+#include "../../events/SDL_events_c.h"
 
 /* Can't include sysaudio "../../audio/android/SDL_androidaudio.h"
  * because of THIS redefinition */
@@ -95,11 +97,14 @@ Android_PumpEvents_Blocking(_THIS)
     SDL_VideoData *videodata = (SDL_VideoData *)_this->driverdata;
 
     if (videodata->isPaused) {
+        SDL_bool isContextExternal = SDL_IsVideoContextExternal();
 
         /* Make sure this is the last thing we do before pausing */
-        SDL_LockMutex(Android_ActivityMutex);
-        android_egl_context_backup(Android_Window);
-        SDL_UnlockMutex(Android_ActivityMutex);
+        if (!isContextExternal) {
+            SDL_LockMutex(Android_ActivityMutex);
+            android_egl_context_backup(Android_Window);
+            SDL_UnlockMutex(Android_ActivityMutex);
+        }
 
         ANDROIDAUDIO_PauseDevices();
         openslES_PauseDevices();
@@ -108,11 +113,16 @@ Android_PumpEvents_Blocking(_THIS)
 
             videodata->isPaused = 0;
 
+            /* Android_ResumeSem was signaled */
+            SDL_SendAppEvent(SDL_APP_WILLENTERFOREGROUND);
+            SDL_SendAppEvent(SDL_APP_DIDENTERFOREGROUND);
+            SDL_SendWindowEvent(Android_Window, SDL_WINDOWEVENT_RESTORED, 0, 0);
+
             ANDROIDAUDIO_ResumeDevices();
             openslES_ResumeDevices();
 
             /* Restore the GL Context from here, as this operation is thread dependent */
-            if (!SDL_HasEvent(SDL_QUIT)) {
+            if (!isContextExternal && !SDL_HasEvent(SDL_QUIT)) {
                 SDL_LockMutex(Android_ActivityMutex);
                 android_egl_context_restore(Android_Window);
                 SDL_UnlockMutex(Android_ActivityMutex);
@@ -125,6 +135,14 @@ Android_PumpEvents_Blocking(_THIS)
         }
     } else {
         if (videodata->isPausing || SDL_SemTryWait(Android_PauseSem) == 0) {
+
+            /* Android_PauseSem was signaled */
+            if (videodata->isPausing == 0) {
+                SDL_SendWindowEvent(Android_Window, SDL_WINDOWEVENT_MINIMIZED, 0, 0);
+                SDL_SendAppEvent(SDL_APP_WILLENTERBACKGROUND);
+                SDL_SendAppEvent(SDL_APP_DIDENTERBACKGROUND);
+            }
+
             /* We've been signaled to pause (potentially several times), but before we block ourselves,
              * we need to make sure that the very last event (of the first pause sequence, if several)
              * has reached the app */
@@ -146,11 +164,14 @@ Android_PumpEvents_NonBlocking(_THIS)
 
     if (videodata->isPaused) {
 
+        SDL_bool isContextExternal = SDL_IsVideoContextExternal();
         if (backup_context) {
 
-            SDL_LockMutex(Android_ActivityMutex);
-            android_egl_context_backup(Android_Window);
-            SDL_UnlockMutex(Android_ActivityMutex);
+            if (!isContextExternal) {
+                SDL_LockMutex(Android_ActivityMutex);
+                android_egl_context_backup(Android_Window);
+                SDL_UnlockMutex(Android_ActivityMutex);
+            }
 
             ANDROIDAUDIO_PauseDevices();
             openslES_PauseDevices();
@@ -163,11 +184,16 @@ Android_PumpEvents_NonBlocking(_THIS)
 
             videodata->isPaused = 0;
 
+            /* Android_ResumeSem was signaled */
+            SDL_SendAppEvent(SDL_APP_WILLENTERFOREGROUND);
+            SDL_SendAppEvent(SDL_APP_DIDENTERFOREGROUND);
+            SDL_SendWindowEvent(Android_Window, SDL_WINDOWEVENT_RESTORED, 0, 0);
+
             ANDROIDAUDIO_ResumeDevices();
             openslES_ResumeDevices();
 
             /* Restore the GL Context from here, as this operation is thread dependent */
-            if (!SDL_HasEvent(SDL_QUIT)) {
+            if (!isContextExternal && !SDL_HasEvent(SDL_QUIT)) {
                 SDL_LockMutex(Android_ActivityMutex);
                 android_egl_context_restore(Android_Window);
                 SDL_UnlockMutex(Android_ActivityMutex);
@@ -180,6 +206,14 @@ Android_PumpEvents_NonBlocking(_THIS)
         }
     } else {
         if (videodata->isPausing || SDL_SemTryWait(Android_PauseSem) == 0) {
+
+            /* Android_PauseSem was signaled */
+            if (videodata->isPausing == 0) {
+                SDL_SendWindowEvent(Android_Window, SDL_WINDOWEVENT_MINIMIZED, 0, 0);
+                SDL_SendAppEvent(SDL_APP_WILLENTERBACKGROUND);
+                SDL_SendAppEvent(SDL_APP_DIDENTERBACKGROUND);
+            }
+
             /* We've been signaled to pause (potentially several times), but before we block ourselves,
              * we need to make sure that the very last event (of the first pause sequence, if several)
              * has reached the app */

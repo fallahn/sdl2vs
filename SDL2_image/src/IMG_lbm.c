@@ -188,7 +188,7 @@ SDL_Surface *IMG_LoadLBM_RW( SDL_RWops *src )
                 goto done;
             }
 
-            if ( !SDL_RWread( src, &colormap, size, 1 ) )
+            if ( !SDL_RWread( src, colormap, size, 1 ) )
             {
                 error="error reading CMAP chunk";
                 goto done;
@@ -241,7 +241,7 @@ SDL_Surface *IMG_LoadLBM_RW( SDL_RWops *src )
     stencil = (bmhd.mask & 1);   /* There is a mask ( 'stencil' ) */
 
     /* Allocate memory for a temporary buffer ( used for
-           decompression/deinterleaving ) */
+       decompression/deinterleaving ) */
 
     MiniBuf = (Uint8 *)SDL_malloc( bytesperline * (nbplanes + stencil) );
     if ( MiniBuf == NULL )
@@ -451,13 +451,13 @@ SDL_Surface *IMG_LoadLBM_RW( SDL_RWops *src )
                             finalcolor = pixelcolor;
                         }
 #if SDL_BYTEORDER == SDL_LIL_ENDIAN
-                            *ptr++ = (Uint8)(finalcolor>>16);
-                            *ptr++ = (Uint8)(finalcolor>>8);
-                            *ptr++ = (Uint8)(finalcolor);
+                        *ptr++ = (Uint8)(finalcolor>>16);
+                        *ptr++ = (Uint8)(finalcolor>>8);
+                        *ptr++ = (Uint8)(finalcolor);
 #else
-                            *ptr++ = (Uint8)(finalcolor);
-                            *ptr++ = (Uint8)(finalcolor>>8);
-                            *ptr++ = (Uint8)(finalcolor>>16);
+                        *ptr++ = (Uint8)(finalcolor);
+                        *ptr++ = (Uint8)(finalcolor>>8);
+                        *ptr++ = (Uint8)(finalcolor>>16);
 #endif
                         maskBit = maskBit>>1;
                     }
@@ -484,6 +484,9 @@ done:
 }
 
 #else /* LOAD_LBM */
+#if _MSC_VER >= 1300
+#pragma warning(disable : 4100) /* warning C4100: 'op' : unreferenced formal parameter */
+#endif
 
 /* See if an image is contained in a data source */
 int IMG_isLBM(SDL_RWops *src)

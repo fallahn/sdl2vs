@@ -465,6 +465,8 @@
     <ClCompile Include="src\cpufeatures\cpu-features.c">
       <Filter>src\cpufeatures</Filter>
     </ClCompile>
+    <ClCompile Include="src\joystick\hidapi\SDL_hidapi_xbox360w.c" />
+    <ClCompile Include="src\stdlib\SDL_strtokr.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\begin_code.h">

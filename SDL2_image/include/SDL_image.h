@@ -37,7 +37,7 @@ extern "C" {
 */
 #define SDL_IMAGE_MAJOR_VERSION 2
 #define SDL_IMAGE_MINOR_VERSION 0
-#define SDL_IMAGE_PATCHLEVEL    5
+#define SDL_IMAGE_PATCHLEVEL    6
 
 /* This macro can be used to fill a version structure with the compile-time
  * version of the SDL_image library.
@@ -147,6 +147,25 @@ extern DECLSPEC int SDLCALL IMG_SavePNG(SDL_Surface *surface, const char *file);
 extern DECLSPEC int SDLCALL IMG_SavePNG_RW(SDL_Surface *surface, SDL_RWops *dst, int freedst);
 extern DECLSPEC int SDLCALL IMG_SaveJPG(SDL_Surface *surface, const char *file, int quality);
 extern DECLSPEC int SDLCALL IMG_SaveJPG_RW(SDL_Surface *surface, SDL_RWops *dst, int freedst, int quality);
+
+/* Animated image support
+   Currently only animated GIFs are supported.
+ */
+typedef struct
+{
+	int w, h;
+	int count;
+	SDL_Surface **frames;
+	int *delays;
+} IMG_Animation;
+
+extern DECLSPEC IMG_Animation * SDLCALL IMG_LoadAnimation(const char *file);
+extern DECLSPEC IMG_Animation * SDLCALL IMG_LoadAnimation_RW(SDL_RWops *src, int freesrc);
+extern DECLSPEC IMG_Animation * SDLCALL IMG_LoadAnimationTyped_RW(SDL_RWops *src, int freesrc, const char *type);
+extern DECLSPEC void SDLCALL IMG_FreeAnimation(IMG_Animation *anim);
+ 
+/* Individual loading functions */
+extern DECLSPEC IMG_Animation * SDLCALL IMG_LoadGIFAnimation_RW(SDL_RWops *src);
 
 /* We'll use SDL for reporting errors */
 #define IMG_SetError    SDL_SetError

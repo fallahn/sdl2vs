@@ -429,6 +429,7 @@ extern VideoBootStrap NACL_bootstrap;
 extern VideoBootStrap VIVANTE_bootstrap;
 extern VideoBootStrap Emscripten_bootstrap;
 extern VideoBootStrap QNX_bootstrap;
+extern VideoBootStrap OFFSCREEN_bootstrap;
 
 extern SDL_VideoDevice *SDL_GetVideoDevice(void);
 extern int SDL_AddBasicVideoDisplay(const SDL_DisplayMode * desktop_mode);
@@ -438,6 +439,7 @@ extern int SDL_GetIndexOfDisplay(SDL_VideoDisplay *display);
 extern SDL_VideoDisplay *SDL_GetDisplay(int displayIndex);
 extern SDL_VideoDisplay *SDL_GetDisplayForWindow(SDL_Window *window);
 extern void *SDL_GetDisplayDriverData( int displayIndex );
+extern SDL_bool SDL_IsVideoContextExternal(void);
 
 extern void SDL_GL_DeduceMaxSupportedESProfile(int* major, int* minor);
 

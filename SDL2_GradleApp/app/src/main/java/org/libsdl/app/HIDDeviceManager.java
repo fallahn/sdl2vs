@@ -103,7 +103,7 @@ public class HIDDeviceManager {
 
     private HIDDeviceManager(final Context context) {
         mContext = context;
-        Log.w(TAG, "HIDDeviceManager");
+
         // Make sure we have the HIDAPI library loaded with the native functions
         try {
             SDL.loadLibrary("hidapi");
@@ -255,17 +255,16 @@ public class HIDDeviceManager {
         if (usbInterface.getInterfaceClass() == UsbConstants.USB_CLASS_HID) {
             return true;
         }
-        if (interface_number == 0) {
-            if (isXbox360Controller(usbDevice, usbInterface) || isXboxOneController(usbDevice, usbInterface)) {
-                return true;
-            }
+        if (isXbox360Controller(usbDevice, usbInterface) || isXboxOneController(usbDevice, usbInterface)) {
+            return true;
         }
         return false;
     }
 
     private boolean isXbox360Controller(UsbDevice usbDevice, UsbInterface usbInterface) {
         final int XB360_IFACE_SUBCLASS = 93;
-        final int XB360_IFACE_PROTOCOL = 1; // Wired only
+        final int XB360_IFACE_PROTOCOL = 1; // Wired
+        final int XB360W_IFACE_PROTOCOL = 129; // Wireless
         final int[] SUPPORTED_VENDORS = {
             0x0079, // GPD Win 2
             0x044f, // Thrustmaster
@@ -275,8 +274,9 @@ public class HIDDeviceManager {
             0x06a3, // Saitek
             0x0738, // Mad Catz
             0x07ff, // Mad Catz
-            0x0e6f, // Unknown
+            0x0e6f, // PDP
             0x0f0d, // Hori
+            0x1038, // SteelSeries
             0x11c9, // Nacon
             0x12ab, // Unknown
             0x1430, // RedOctane
@@ -291,7 +291,8 @@ public class HIDDeviceManager {
 
         if (usbInterface.getInterfaceClass() == UsbConstants.USB_CLASS_VENDOR_SPEC &&
             usbInterface.getInterfaceSubclass() == XB360_IFACE_SUBCLASS &&
-            usbInterface.getInterfaceProtocol() == XB360_IFACE_PROTOCOL) {
+            (usbInterface.getInterfaceProtocol() == XB360_IFACE_PROTOCOL ||
+             usbInterface.getInterfaceProtocol() == XB360W_IFACE_PROTOCOL)) {
             int vendor_id = usbDevice.getVendorId();
             for (int supportedVid : SUPPORTED_VENDORS) {
                 if (vendor_id == supportedVid) {
@@ -308,13 +309,15 @@ public class HIDDeviceManager {
         final int[] SUPPORTED_VENDORS = {
             0x045e, // Microsoft
             0x0738, // Mad Catz
-            0x0e6f, // Unknown
+            0x0e6f, // PDP
             0x0f0d, // Hori
             0x1532, // Razer Wildcat
             0x24c6, // PowerA
+            0x2e24, // Hyperkin
         };
 
-        if (usbInterface.getInterfaceClass() == UsbConstants.USB_CLASS_VENDOR_SPEC &&
+        if (usbInterface.getId() == 0 &&
+            usbInterface.getInterfaceClass() == UsbConstants.USB_CLASS_VENDOR_SPEC &&
             usbInterface.getInterfaceSubclass() == XB1_IFACE_SUBCLASS &&
             usbInterface.getInterfaceProtocol() == XB1_IFACE_PROTOCOL) {
             int vendor_id = usbDevice.getVendorId();
