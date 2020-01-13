@@ -266,7 +266,6 @@
     <ClCompile Include="src\render\psp\SDL_render_psp.c" />
     <ClCompile Include="src\render\SDL_d3dmath.c" />
     <ClCompile Include="src\render\SDL_render.c" />
-    <ClCompile Include="src\render\SDL_yuv_mmx.c" />
     <ClCompile Include="src\render\SDL_yuv_sw.c" />
     <ClCompile Include="src\render\software\SDL_blendfillrect.c" />
     <ClCompile Include="src\render\software\SDL_blendline.c" />

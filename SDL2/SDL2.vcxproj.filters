@@ -186,9 +186,6 @@
     <ClCompile Include="src\render\SDL_render.c">
       <Filter>src\render</Filter>
     </ClCompile>
-    <ClCompile Include="src\render\SDL_yuv_mmx.c">
-      <Filter>src\render</Filter>
-    </ClCompile>
     <ClCompile Include="src\render\SDL_yuv_sw.c">
       <Filter>src\render</Filter>
     </ClCompile>
