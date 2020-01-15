@@ -3,20 +3,17 @@ SDL2 Template Solution
 
 This solution demonstrates how to set up a basic SDL2 project for Android in Visual Studio 2019. The solution is explained in detail on [my blog](http://trederia.blogspot.com/2017/03/building-sdl2-for-android-with-visual.html).
 
-## Modifications 2020-01-09
+## Modifications 2020-01-15
 
+- Microsoft Visual Studio 2019
+- Fix crash on startup
+- add hidapi lib
+- fix x86 build
 - Merge from from Mercurial > 2.0.11
 - remove SDL_Application
 - update AndroidManifest
 - add free font and label hello world
-
-## Modifications 2019-12-10
-
-- Microsoft Visual Studio 2019
-- Partial merge from Mercurial > 2.0.10
-- Fix crash on startup
-- add hidapi lib
-- fix x86 build
+- switch to c++17
 
 ## Modifications 2019-09-07
 

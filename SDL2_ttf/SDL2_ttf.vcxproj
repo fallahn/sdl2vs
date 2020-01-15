@@ -168,6 +168,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include;src\freetype\include;..\SDL2\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android;SDL2</LibraryDependencies>
@@ -178,6 +179,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include;src\freetype\include;..\SDL2\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android;SDL2</LibraryDependencies>
@@ -188,6 +190,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include;src\freetype\include;..\SDL2\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android;SDL2</LibraryDependencies>
@@ -198,6 +201,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include;src\freetype\include;..\SDL2\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android;SDL2</LibraryDependencies>
@@ -208,6 +212,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include;src\freetype\include;..\SDL2\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android;SDL2</LibraryDependencies>
@@ -218,6 +223,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include;src\freetype\include;..\SDL2\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android;SDL2</LibraryDependencies>
@@ -229,6 +235,7 @@
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include;src\freetype\include;..\SDL2\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <EnableNeonCodegen>true</EnableNeonCodegen>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android;SDL2</LibraryDependencies>
@@ -240,6 +247,7 @@
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include;src\freetype\include;..\SDL2\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <EnableNeonCodegen>true</EnableNeonCodegen>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android;SDL2</LibraryDependencies>

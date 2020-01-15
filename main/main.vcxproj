@@ -133,6 +133,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);..\SDL2\include;..\SDL2_ttf\include;..\SDL2_image\include</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\$(ToolchainFullVersionName)\$(PlatformShortName);$(StlLibraryPath);$(SolutionDir)$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
@@ -142,6 +143,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <ClCompile>
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);..\SDL2\include;..\SDL2_ttf\include;..\SDL2_image\include</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\$(ToolchainFullVersionName)\$(PlatformShortName);$(StlLibraryPath);$(SolutionDir)$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
@@ -151,6 +153,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <ClCompile>
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);..\SDL2\include;..\SDL2_ttf\include;..\SDL2_image\include</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\$(ToolchainFullVersionName)\$(PlatformShortName);$(StlLibraryPath);$(SolutionDir)$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
@@ -160,6 +163,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <ClCompile>
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);..\SDL2\include;..\SDL2_ttf\include;..\SDL2_image\include</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\$(ToolchainFullVersionName)\$(PlatformShortName);$(StlLibraryPath);$(SolutionDir)$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
@@ -169,6 +173,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <ClCompile>
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);..\SDL2\include;..\SDL2_ttf\include;..\SDL2_image\include</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\$(ToolchainFullVersionName)\$(PlatformShortName);$(StlLibraryPath);$(SolutionDir)$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
@@ -178,6 +183,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <ClCompile>
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);..\SDL2\include;..\SDL2_ttf\include;..\SDL2_image\include</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\$(ToolchainFullVersionName)\$(PlatformShortName);$(StlLibraryPath);$(SolutionDir)$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
@@ -187,6 +193,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);..\SDL2\include;..\SDL2_ttf\include;..\SDL2_image\include</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\$(ToolchainFullVersionName)\$(PlatformShortName);$(StlLibraryPath);$(SolutionDir)$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
@@ -196,6 +203,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);..\SDL2\include;..\SDL2_ttf\include;..\SDL2_image\include</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\$(ToolchainFullVersionName)\$(PlatformShortName);$(StlLibraryPath);$(SolutionDir)$(Platform)\$(Configuration)</AdditionalLibraryDirectories>

@@ -210,6 +210,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include;src\jpeg;src\png;..\SDL2\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>LOAD_BMP;LOAD_GIF;LOAD_LBM;LOAD_PCX;LOAD_PNM;LOAD_TGA;LOAD_XCF;LOAD_XPM;LOAD_XV;LOAD_JPG;AVOID_TABLES;LOAD_PNG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android;SDL2;z</LibraryDependencies>
@@ -220,6 +221,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include;src\jpeg;src\png;..\SDL2\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>LOAD_BMP;LOAD_GIF;LOAD_LBM;LOAD_PCX;LOAD_PNM;LOAD_TGA;LOAD_XCF;LOAD_XPM;LOAD_XV;LOAD_JPG;AVOID_TABLES;LOAD_PNG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android;SDL2;z</LibraryDependencies>
@@ -230,6 +232,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include;src\jpeg;src\png;..\SDL2\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>LOAD_BMP;LOAD_GIF;LOAD_LBM;LOAD_PCX;LOAD_PNM;LOAD_TGA;LOAD_XCF;LOAD_XPM;LOAD_XV;LOAD_JPG;AVOID_TABLES;LOAD_PNG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android;SDL2;z</LibraryDependencies>
@@ -240,6 +243,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include;src\jpeg;src\png;..\SDL2\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>LOAD_BMP;LOAD_GIF;LOAD_LBM;LOAD_PCX;LOAD_PNM;LOAD_TGA;LOAD_XCF;LOAD_XPM;LOAD_XV;LOAD_JPG;AVOID_TABLES;LOAD_PNG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android;SDL2;z</LibraryDependencies>
@@ -250,6 +254,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include;src\jpeg;src\png;..\SDL2\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>LOAD_BMP;LOAD_GIF;LOAD_LBM;LOAD_PCX;LOAD_PNM;LOAD_TGA;LOAD_XCF;LOAD_XPM;LOAD_XV;LOAD_JPG;AVOID_TABLES;LOAD_PNG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android;SDL2;z</LibraryDependencies>
@@ -260,6 +265,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include;src\jpeg;src\png;..\SDL2\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>LOAD_BMP;LOAD_GIF;LOAD_LBM;LOAD_PCX;LOAD_PNM;LOAD_TGA;LOAD_XCF;LOAD_XPM;LOAD_XV;LOAD_JPG;AVOID_TABLES;LOAD_PNG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android;SDL2;z</LibraryDependencies>
@@ -271,6 +277,7 @@
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include;src\jpeg;src\png;..\SDL2\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>LOAD_BMP;LOAD_GIF;LOAD_LBM;LOAD_PCX;LOAD_PNM;LOAD_TGA;LOAD_XCF;LOAD_XPM;LOAD_XV;LOAD_JPG;AVOID_TABLES;LOAD_PNG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <EnableNeonCodegen>true</EnableNeonCodegen>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\$(ToolchainFullVersionName)\$(PlatformShortName);$(StlLibraryPath);$(SolutionDir)$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
@@ -282,6 +289,7 @@
       <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include;src\jpeg;src\png;..\SDL2\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>LOAD_BMP;LOAD_GIF;LOAD_LBM;LOAD_PCX;LOAD_PNM;LOAD_TGA;LOAD_XCF;LOAD_XPM;LOAD_XV;LOAD_JPG;AVOID_TABLES;LOAD_PNG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <EnableNeonCodegen>true</EnableNeonCodegen>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
       <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android;SDL2;z</LibraryDependencies>
