@@ -142,13 +142,13 @@ SDL_Surface *IMG_LoadPCX_RW(SDL_RWops *src)
     } else if(pcxh.BitsPerPixel == 8 && pcxh.NPlanes == 3) {
         bits = 24;
 #if SDL_BYTEORDER == SDL_LIL_ENDIAN
-            Rmask = 0x000000FF;
-            Gmask = 0x0000FF00;
-            Bmask = 0x00FF0000;
+        Rmask = 0x000000FF;
+        Gmask = 0x0000FF00;
+        Bmask = 0x00FF0000;
 #else
-            Rmask = 0xFF0000;
-            Gmask = 0x00FF00;
-            Bmask = 0x0000FF;
+        Rmask = 0xFF0000;
+        Gmask = 0x00FF00;
+        Bmask = 0x0000FF;
 #endif
     } else {
         error = "unsupported PCX format";
@@ -283,6 +283,9 @@ done:
 }
 
 #else
+#if _MSC_VER >= 1300
+#pragma warning(disable : 4100) /* warning C4100: 'op' : unreferenced formal parameter */
+#endif
 
 /* See if an image is contained in a data source */
 int IMG_isPCX(SDL_RWops *src)

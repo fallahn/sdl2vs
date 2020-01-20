@@ -1,1 +1,8 @@
 ARM
+/.vs
+/SDL2_GradleApp/app/build
+/SDL2_GradleApp/.gradle
+x86
+/SDL2_GradleApp/app/src/main/jniLibs
+*.user
+/.workspace

@@ -934,7 +934,7 @@ static char *get_next_line(char ***lines, SDL_RWops *src, int len)
         char c;
         int n;
         do {
-            if (SDL_RWread(src, &c, 1, 1) <= 0) {
+            if (!SDL_RWread(src, &c, 1, 1)) {
                 error = "Premature end of data";
                 return NULL;
             }
@@ -951,7 +951,7 @@ static char *get_next_line(char ***lines, SDL_RWops *src, int len)
                 }
                 linebuf = linebufnew;
             }
-            if (SDL_RWread(src, linebuf, len - 1, 1) <= 0) {
+            if (!SDL_RWread(src, linebuf, len - 1, 1)) {
                 error = "Premature end of data";
                 return NULL;
             }
@@ -971,7 +971,7 @@ static char *get_next_line(char ***lines, SDL_RWops *src, int len)
                     }
                     linebuf = linebufnew;
                 }
-                if (SDL_RWread(src, linebuf + n, 1, 1) <= 0) {
+                if (!SDL_RWread(src, linebuf + n, 1, 1)) {
                     error = "Premature end of data";
                     return NULL;
                 }
@@ -1189,6 +1189,9 @@ SDL_Surface *IMG_ReadXPMFromArray(char **xpm)
 }
 
 #else  /* not LOAD_XPM */
+#if _MSC_VER >= 1300
+#pragma warning(disable : 4100) /* warning C4100: 'op' : unreferenced formal parameter */
+#endif
 
 /* See if an image is contained in a data source */
 int IMG_isXPM(SDL_RWops *src)

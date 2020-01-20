@@ -134,7 +134,7 @@
     <ClCompile>
       <PreprocessorDefinitions>; GL_GLEXT_PROTOTYPES</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(VS_NdkRoot)\sources\android\cpufeatures;$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include</AdditionalIncludeDirectories>
-      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
       <EnableNeonCodegen>true</EnableNeonCodegen>
     </ClCompile>
     <Link>
@@ -145,7 +145,7 @@
     <ClCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions); GL_GLEXT_PROTOTYPES</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(VS_NdkRoot)\sources\android\cpufeatures;$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include</AdditionalIncludeDirectories>
-      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
       <EnableNeonCodegen>true</EnableNeonCodegen>
     </ClCompile>
     <Link>
@@ -155,61 +155,61 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <ClCompile>
       <PreprocessorDefinitions>; GL_GLEXT_PROTOTYPES</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include</AdditionalIncludeDirectories>
-      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <AdditionalIncludeDirectories>$(VS_NdkRoot)\sources\android\cpufeatures;$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android</LibraryDependencies>
+      <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;OpenSLES;log;android</LibraryDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <ClCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions); GL_GLEXT_PROTOTYPES</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include</AdditionalIncludeDirectories>
-      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <AdditionalIncludeDirectories>$(VS_NdkRoot)\sources\android\cpufeatures;$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android</LibraryDependencies>
+      <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;OpenSLES;log;android</LibraryDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <ClCompile>
       <PreprocessorDefinitions>; GL_GLEXT_PROTOTYPES</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include</AdditionalIncludeDirectories>
-      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <AdditionalIncludeDirectories>$(VS_NdkRoot)\sources\android\cpufeatures;$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android</LibraryDependencies>
+      <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;OpenSLES;log;android</LibraryDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <ClCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions); GL_GLEXT_PROTOTYPES</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include</AdditionalIncludeDirectories>
-      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <AdditionalIncludeDirectories>$(VS_NdkRoot)\sources\android\cpufeatures;$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android</LibraryDependencies>
+      <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;OpenSLES;log;android</LibraryDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <PreprocessorDefinitions>; GL_GLEXT_PROTOTYPES</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include</AdditionalIncludeDirectories>
-      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <AdditionalIncludeDirectories>$(VS_NdkRoot)\sources\android\cpufeatures;$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android</LibraryDependencies>
+      <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;OpenSLES;log;android</LibraryDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions); GL_GLEXT_PROTOTYPES</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include</AdditionalIncludeDirectories>
-      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <AdditionalIncludeDirectories>$(VS_NdkRoot)\sources\android\cpufeatures;$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;log;android</LibraryDependencies>
+      <LibraryDependencies>$(StlLibraryName);%(LibraryDependencies);m;dl;GLESv1_CM;GLESv2;OpenSLES;log;android</LibraryDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -249,6 +249,7 @@
     <ClCompile Include="src\joystick\hidapi\SDL_hidapi_ps4.c" />
     <ClCompile Include="src\joystick\hidapi\SDL_hidapi_switch.c" />
     <ClCompile Include="src\joystick\hidapi\SDL_hidapi_xbox360.c" />
+    <ClCompile Include="src\joystick\hidapi\SDL_hidapi_xbox360w.c" />
     <ClCompile Include="src\joystick\hidapi\SDL_hidapi_xboxone.c" />
     <ClCompile Include="src\joystick\SDL_gamecontroller.c" />
     <ClCompile Include="src\joystick\SDL_joystick.c" />
@@ -265,7 +266,6 @@
     <ClCompile Include="src\render\psp\SDL_render_psp.c" />
     <ClCompile Include="src\render\SDL_d3dmath.c" />
     <ClCompile Include="src\render\SDL_render.c" />
-    <ClCompile Include="src\render\SDL_yuv_mmx.c" />
     <ClCompile Include="src\render\SDL_yuv_sw.c" />
     <ClCompile Include="src\render\software\SDL_blendfillrect.c" />
     <ClCompile Include="src\render\software\SDL_blendline.c" />
@@ -288,6 +288,7 @@
     <ClCompile Include="src\stdlib\SDL_qsort.c" />
     <ClCompile Include="src\stdlib\SDL_stdlib.c" />
     <ClCompile Include="src\stdlib\SDL_string.c" />
+    <ClCompile Include="src\stdlib\SDL_strtokr.c" />
     <ClCompile Include="src\test\SDL_test_assert.c" />
     <ClCompile Include="src\test\SDL_test_common.c" />
     <ClCompile Include="src\test\SDL_test_compare.c" />

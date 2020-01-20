@@ -4,7 +4,7 @@ SDL_IMAGE_LOCAL_PATH := $(call my-dir)
 # Enable this if you want to support loading JPEG images
 # The library path should be a relative path to this directory.
 SUPPORT_JPG ?= true
-JPG_LIBRARY_PATH := external/jpeg-9b
+JPG_LIBRARY_PATH := external/jpeg-9c
 
 # Enable this if you want to support loading PNG images
 # The library path should be a relative path to this directory.
@@ -14,7 +14,7 @@ PNG_LIBRARY_PATH := external/libpng-1.6.37
 # Enable this if you want to support loading WebP images
 # The library path should be a relative path to this directory.
 SUPPORT_WEBP ?= true
-WEBP_LIBRARY_PATH := external/libwebp-1.0.2
+WEBP_LIBRARY_PATH := external/libwebp-1.0.3
 
 
 # Build the library
@@ -87,3 +87,19 @@ endif
 LOCAL_EXPORT_C_INCLUDES += $(LOCAL_PATH)
 
 include $(BUILD_SHARED_LIBRARY)
+
+###########################
+#
+# SDL2_image static library
+#
+###########################
+
+LOCAL_MODULE := SDL2_image_static
+
+LOCAL_MODULE_FILENAME := libSDL2_image
+
+LOCAL_LDLIBS :=
+LOCAL_EXPORT_LDLIBS :=
+
+include $(BUILD_STATIC_LIBRARY)
+

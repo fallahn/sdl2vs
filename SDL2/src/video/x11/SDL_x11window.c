@@ -637,7 +637,6 @@ X11_CreateWindow(_THIS, SDL_Window * window)
     ) {
 #if SDL_VIDEO_OPENGL_EGL  
         if (!_this->egl_data) {
-            X11_XDestroyWindow(display, w);
             return -1;
         }
 
@@ -645,7 +644,6 @@ X11_CreateWindow(_THIS, SDL_Window * window)
         windowdata->egl_surface = SDL_EGL_CreateSurface(_this, (NativeWindowType) w);
 
         if (windowdata->egl_surface == EGL_NO_SURFACE) {
-            X11_XDestroyWindow(display, w);
             return SDL_SetError("Could not create GLES window surface");
         }
 #else
@@ -805,9 +803,24 @@ X11_SetWindowPosition(_THIS, SDL_Window * window)
 {
     SDL_WindowData *data = (SDL_WindowData *) window->driverdata;
     Display *display = data->videodata->display;
+    unsigned int childCount;
+    Window childReturn, root, parent;
+    Window* children;
+    XWindowAttributes attrs;
 
+    /*Attempt to move the window*/
     X11_XMoveWindow(display, data->xwindow, window->x - data->border_left, window->y - data->border_top);
     X11_XFlush(display);
+
+    /*If the window is not moved, then the coordinates on the window structure are out of sync, so we
+      update them here. */
+    X11_XQueryTree(display, data->xwindow, &root, &parent, &children, &childCount);
+    X11_XGetWindowAttributes(display, data->xwindow, &attrs);
+    X11_XTranslateCoordinates(display,
+                              parent, DefaultRootWindow(display),
+                              attrs.x, attrs.y,
+                              &window->x, &window->y,
+                              &childReturn);
 }
 
 void

@@ -176,11 +176,17 @@ LoadICOCUR_RW(SDL_RWops * src, int type, int freesrc)
         int bWidth = SDL_Read8(src);    /* Uint8, but 0 = 256 ! */
         int bHeight = SDL_Read8(src);   /* Uint8, but 0 = 256 ! */
         int bColorCount = SDL_Read8(src);       /* Uint8, but 0 = 256 ! */
-        /* Uint8 bReserved = */ SDL_Read8(src);
-        /* Uint16 wPlanes = */ SDL_ReadLE16(src);
-        /* Uint16 wBitCount = */ SDL_ReadLE16(src);
-        /* Uint32 dwBytesInRes = */ SDL_ReadLE32(src);
-        Uint32 dwImageOffset = SDL_ReadLE32(src);
+        /* Uint8 bReserved;
+        Uint16 wPlanes;
+        Uint16 wBitCount;
+        Uint32 dwBytesInRes; */
+        Uint32 dwImageOffset;
+        
+        /* bReserved = */ SDL_Read8(src);
+        /* wPlanes = */ SDL_ReadLE16(src);
+        /* wBitCount = */ SDL_ReadLE16(src);
+        /* dwBytesInRes = */ SDL_ReadLE32(src);
+        dwImageOffset = SDL_ReadLE32(src);
 
         if (!bWidth)
             bWidth = 256;
@@ -419,6 +425,9 @@ SDL_Surface *IMG_LoadCUR_RW(SDL_RWops *src)
 }
 
 #else
+#if _MSC_VER >= 1300
+#pragma warning(disable : 4100) /* warning C4100: 'op' : unreferenced formal parameter */
+#endif
 
 /* See if an image is contained in a data source */
 int IMG_isBMP(SDL_RWops *src)

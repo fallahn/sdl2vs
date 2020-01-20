@@ -29,6 +29,10 @@
 #ifndef NANOSVG_H
 #define NANOSVG_H
 
+#ifndef NSVG_EXPORT
+#define NSVG_EXPORT
+#endif
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -161,14 +165,14 @@ typedef struct NSVGimage
 } NSVGimage;
 
 // Parses SVG file from a file, returns SVG image as paths.
-NSVGimage* nsvgParseFromFile(const char* filename, const char* units, float dpi);
+NSVG_EXPORT NSVGimage* nsvgParseFromFile(const char* filename, const char* units, float dpi);
 
 // Parses SVG file from a null terminated string, returns SVG image as paths.
 // Important note: changes the string.
-NSVGimage* nsvgParse(char* input, const char* units, float dpi);
+NSVG_EXPORT NSVGimage* nsvgParse(char* input, const char* units, float dpi);
 
 // Deletes list of paths.
-void nsvgDelete(NSVGimage* image);
+NSVG_EXPORT void nsvgDelete(NSVGimage* image);
 
 #ifdef __cplusplus
 }
@@ -281,8 +285,8 @@ static void nsvg__parseElement(char* s,
 
 	// Get attribs
 	while (!end && *s && nattr < NSVG_XML_MAX_ATTRIBS-3) {
-		char* name = NULL;
-		char* value = NULL;
+		char* attr_name = NULL;
+		char* attr_value = NULL;
 
 		// Skip white space before the attrib name
 		while (*s && nsvg__isspace(*s)) s++;
@@ -291,7 +295,7 @@ static void nsvg__parseElement(char* s,
 			end = 1;
 			break;
 		}
-		name = s;
+		attr_name = s;
 		// Find end of the attrib name.
 		while (*s && !nsvg__isspace(*s) && *s != '=') s++;
 		if (*s) { *s++ = '\0'; }
@@ -301,14 +305,14 @@ static void nsvg__parseElement(char* s,
 		quote = *s;
 		s++;
 		// Store value and find the end of it.
-		value = s;
+		attr_value = s;
 		while (*s && *s != quote) s++;
 		if (*s) { *s++ = '\0'; }
 
 		// Store only well formed attributes
-		if (name && value) {
-			attr[nattr++] = name;
-			attr[nattr++] = value;
+		if (attr_name && attr_value) {
+			attr[nattr++] = attr_name;
+			attr[nattr++] = attr_value;
 		}
 	}
 
@@ -323,7 +327,7 @@ static void nsvg__parseElement(char* s,
 		(*endelCb)(ud, name);
 }
 
-int nsvg__parseXML(char* input,
+static int nsvg__parseXML(char* input,
 				   void (*startelCb)(void* ud, const char* el, const char** attr),
 				   void (*endelCb)(void* ud, const char* el),
 				   void (*contentCb)(void* ud, const char* s),
@@ -818,7 +822,6 @@ static float nsvg__convertToPixels(NSVGparser* p, NSVGcoordinate c, float orig, 
 		case NSVG_UNITS_PERCENT:	return orig + c.value / 100.0f * length;
 		default:					return c.value;
 	}
-	return c.value;
 }
 
 static NSVGgradientData* nsvg__findGradientData(NSVGparser* p, const char* id)
@@ -1257,7 +1260,7 @@ typedef struct NSVGNamedColor {
 	unsigned int color;
 } NSVGNamedColor;
 
-NSVGNamedColor nsvg__colors[] = {
+static NSVGNamedColor nsvg__colors[] = {
 
 	{ "red", NSVG_RGB(255, 0, 0) },
 	{ "green", NSVG_RGB( 0, 128, 0) },
@@ -2778,7 +2781,7 @@ static void nsvg__content(void* ud, const char* s)
 	if (p->styleFlag) {
 
 		int state = 0;
-		const char* start;		
+		const char* start = s;		
 		while (*s) {
 			char c = *s;
 			if (nsvg__isspace(c) || c == '{') {
@@ -2788,7 +2791,6 @@ static void nsvg__content(void* ud, const char* s)
 					p->styles = (NSVGstyles*)malloc(sizeof(NSVGstyles));
 					p->styles->next = next;
 					p->styles->name = nsvg__strndup(start, (size_t)(s - start));
-					p->styles->next = NULL;
 					start = s + 1;
 					state = 2;
 				}				
@@ -2962,7 +2964,7 @@ static void nsvg__scaleToViewbox(NSVGparser* p, const char* units)
 	}
 }
 
-NSVGimage* nsvgParse(char* input, const char* units, float dpi)
+NSVG_EXPORT NSVGimage* nsvgParse(char* input, const char* units, float dpi)
 {
 	NSVGparser* p;
 	NSVGimage* ret = 0;
@@ -2987,7 +2989,7 @@ NSVGimage* nsvgParse(char* input, const char* units, float dpi)
 }
 
 #ifdef HAVE_STDIO_H
-NSVGimage* nsvgParseFromFile(const char* filename, const char* units, float dpi)
+NSVG_EXPORT NSVGimage* nsvgParseFromFile(const char* filename, const char* units, float dpi)
 {
 	FILE* fp = NULL;
 	size_t size;
@@ -3017,7 +3019,7 @@ error:
 }
 #endif /* HAVE_STDIO_H */
 
-void nsvgDelete(NSVGimage* image)
+NSVG_EXPORT void nsvgDelete(NSVGimage* image)
 {
 	NSVGshape *snext, *shape;
 	if (image == NULL) return;

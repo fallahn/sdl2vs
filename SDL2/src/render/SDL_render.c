@@ -689,9 +689,13 @@ SDL_RendererEventWatch(void *userdata, SDL_Event *event)
         SDL_FPoint scale;
         GetWindowViewportValues(renderer, &logical_w, &logical_h, &viewport, &scale);
         if (logical_w) {
-            int w = 1;
-            int h = 1;
-            SDL_GetRendererOutputSize(renderer, &w, &h);
+            int w, h;
+
+            if (renderer->GetOutputSize) {
+                renderer->GetOutputSize(renderer, &w, &h);
+            } else {
+                SDL_GetWindowSize(renderer->window, &w, &h);
+            }
 
             event->tfinger.x *= (w - 1);
             event->tfinger.y *= (h - 1);
@@ -1384,6 +1388,33 @@ SDL_GetTextureBlendMode(SDL_Texture * texture, SDL_BlendMode *blendMode)
     return 0;
 }
 
+int
+SDL_SetTextureScaleMode(SDL_Texture * texture, SDL_ScaleMode scaleMode)
+{
+    SDL_Renderer *renderer;
+
+    CHECK_TEXTURE_MAGIC(texture, -1);
+
+    renderer = texture->renderer;
+    renderer->SetTextureScaleMode(renderer, texture, scaleMode);
+    texture->scaleMode = scaleMode;
+    if (texture->native) {
+        return SDL_SetTextureScaleMode(texture->native, scaleMode);
+    }
+    return 0;
+}
+
+int
+SDL_GetTextureScaleMode(SDL_Texture * texture, SDL_ScaleMode *scaleMode)
+{
+    CHECK_TEXTURE_MAGIC(texture, -1);
+
+    if (scaleMode) {
+        *scaleMode = texture->scaleMode;
+    }
+    return 0;
+}
+
 static int
 SDL_UpdateTextureYUV(SDL_Texture * texture, const SDL_Rect * rect,
                      const void *pixels, int pitch)
@@ -1680,6 +1711,42 @@ SDL_LockTexture(SDL_Texture * texture, const SDL_Rect * rect,
     }
 }
 
+int
+SDL_LockTextureToSurface(SDL_Texture *texture, const SDL_Rect *rect,
+                         SDL_Surface **surface)
+{
+    SDL_Rect real_rect;
+    void *pixels = NULL;
+    int pitch, ret;
+
+    if (texture == NULL || surface == NULL) {
+        return -1;
+    }
+
+    real_rect.x = 0;
+    real_rect.y = 0;
+    real_rect.w = texture->w;
+    real_rect.h = texture->h;
+
+    if (rect) {
+        SDL_IntersectRect(rect, &real_rect, &real_rect);
+    }
+
+    ret = SDL_LockTexture(texture, &real_rect, &pixels, &pitch);
+    if (ret < 0) {
+        return ret;
+    }
+
+    texture->locked_surface = SDL_CreateRGBSurfaceWithFormatFrom(pixels, real_rect.w, real_rect.h, 0, pitch, texture->format);
+    if (texture->locked_surface == NULL) {
+        SDL_UnlockTexture(texture);
+        return -1;
+    }
+
+    *surface = texture->locked_surface;
+    return 0;
+}
+
 static void
 SDL_UnlockTextureYUV(SDL_Texture * texture)
 {
@@ -1738,6 +1805,9 @@ SDL_UnlockTexture(SDL_Texture * texture)
         SDL_Renderer *renderer = texture->renderer;
         renderer->UnlockTexture(renderer, texture);
     }
+
+    SDL_FreeSurface(texture->locked_surface);
+    texture->locked_surface = NULL;
 }
 
 SDL_bool
@@ -3090,6 +3160,10 @@ SDL_DestroyTexture(SDL_Texture * texture)
     SDL_free(texture->pixels);
 
     renderer->DestroyTexture(renderer, texture);
+
+    SDL_FreeSurface(texture->locked_surface);
+    texture->locked_surface = NULL;
+
     SDL_free(texture);
 }
 

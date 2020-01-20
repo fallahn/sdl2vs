@@ -691,7 +691,9 @@ static void SDL_PrivateLoadButtonMapping(SDL_GameController *gamecontroller, con
 
     gamecontroller->name = pchName;
     gamecontroller->num_bindings = 0;
-    SDL_memset(gamecontroller->last_match_axis, 0, gamecontroller->joystick->naxes * sizeof(*gamecontroller->last_match_axis));
+    if (gamecontroller->joystick->naxes) {
+        SDL_memset(gamecontroller->last_match_axis, 0, gamecontroller->joystick->naxes * sizeof(*gamecontroller->last_match_axis));
+    }
 
     SDL_PrivateGameControllerParseControllerConfigString(gamecontroller, pchMapping);
 
@@ -879,7 +881,7 @@ SDL_PrivateAddMappingForGUID(SDL_JoystickGUID jGUID, const char *mappingString, 
             for ( pPrevMapping = s_pSupportedControllers, pCurrMapping = pPrevMapping->next;
                   pCurrMapping; 
                   pPrevMapping = pCurrMapping, pCurrMapping = pCurrMapping->next ) {
-                continue;
+                /* continue; */
             }
             pPrevMapping->next = pControllerMapping;
         } else {
@@ -1411,6 +1413,16 @@ SDL_GameControllerNameForIndex(int device_index)
 
 
 /**
+ *  Get the type of a game controller.
+ */
+SDL_GameControllerType
+SDL_GameControllerTypeForIndex(int joystick_index)
+{
+    return SDL_GetJoystickGameControllerTypeFromGUID(SDL_JoystickGetDeviceGUID(joystick_index), SDL_JoystickNameForIndex(joystick_index));
+}
+
+
+/**
  *  Get the mapping of a game controller.
  *  This can be called before any controllers are opened.
  *  If no mapping can be found, this function returns NULL.
@@ -1741,10 +1753,25 @@ SDL_GameControllerName(SDL_GameController * gamecontroller)
     }
 }
 
+SDL_GameControllerType
+SDL_GameControllerGetType(SDL_GameController *gamecontroller)
+{
+    return SDL_GetJoystickGameControllerTypeFromGUID(SDL_JoystickGetGUID(SDL_GameControllerGetJoystick(gamecontroller)), SDL_JoystickName(SDL_GameControllerGetJoystick(gamecontroller)));
+}
+
 int
 SDL_GameControllerGetPlayerIndex(SDL_GameController *gamecontroller)
 {
     return SDL_JoystickGetPlayerIndex(SDL_GameControllerGetJoystick(gamecontroller));
+}
+
+/**
+ *  Set the player index of an opened game controller
+ */
+void
+SDL_GameControllerSetPlayerIndex(SDL_GameController *gamecontroller, int player_index)
+{
+    SDL_JoystickSetPlayerIndex(SDL_GameControllerGetJoystick(gamecontroller), player_index);
 }
 
 Uint16
@@ -1791,7 +1818,7 @@ SDL_Joystick *SDL_GameControllerGetJoystick(SDL_GameController * gamecontroller)
 
 
 /*
- * Find the SDL_GameController that owns this instance id
+ * Return the SDL_GameController associated with an instance id.
  */
 SDL_GameController *
 SDL_GameControllerFromInstanceID(SDL_JoystickID joyid)
@@ -1808,6 +1835,19 @@ SDL_GameControllerFromInstanceID(SDL_JoystickID joyid)
         gamecontroller = gamecontroller->next;
     }
     SDL_UnlockJoysticks();
+    return NULL;
+}
+
+
+/**
+ * Return the SDL_GameController associated with a player index.
+ */
+SDL_GameController *SDL_GameControllerFromPlayerIndex(int player_index)
+{
+    SDL_Joystick *joystick = SDL_JoystickFromPlayerIndex(player_index);
+    if (joystick) {
+        return SDL_GameControllerFromInstanceID(joystick->instance_id);
+    }
     return NULL;
 }
 

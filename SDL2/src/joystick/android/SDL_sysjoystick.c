@@ -344,7 +344,7 @@ Android_AddJoystick(int device_id, const char *name, const char *desc, int vendo
     }
 
 #ifdef SDL_JOYSTICK_HIDAPI
-    if (HIDAPI_IsDevicePresent(vendor_id, product_id, 0)) {
+    if (HIDAPI_IsDevicePresent(vendor_id, product_id, 0, name)) {
         /* The HIDAPI driver is taking care of this device */
         return -1;
     }
@@ -587,6 +587,11 @@ ANDROID_JoystickGetDevicePlayerIndex(int device_index)
     return -1;
 }
 
+static void
+ANDROID_JoystickSetDevicePlayerIndex(int device_index, int player_index)
+{
+}
+
 static SDL_JoystickGUID
 ANDROID_JoystickGetDeviceGUID(int device_index)
 {
@@ -696,6 +701,7 @@ SDL_JoystickDriver SDL_ANDROID_JoystickDriver =
     ANDROID_JoystickDetect,
     ANDROID_JoystickGetDeviceName,
     ANDROID_JoystickGetDevicePlayerIndex,
+    ANDROID_JoystickSetDevicePlayerIndex,
     ANDROID_JoystickGetDeviceGUID,
     ANDROID_JoystickGetDeviceInstanceID,
     ANDROID_JoystickOpen,
