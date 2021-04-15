@@ -31,9 +31,6 @@
     <Filter Include="src\joystick">
       <UniqueIdentifier>{06552d48-58a8-48dc-b1a7-93ad351a2b60}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\dlopen">
-      <UniqueIdentifier>{a391415e-d708-40dc-a3f3-72f54d71a050}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\power">
       <UniqueIdentifier>{bf7e1f6a-49ff-48b0-943e-f2364a3e5271}</UniqueIdentifier>
     </Filter>
@@ -70,652 +67,716 @@
     <Filter Include="src\cpufeatures">
       <UniqueIdentifier>{6ad619de-c93d-4255-948f-8eb83be743b5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\loadso">
+      <UniqueIdentifier>{a391415e-d708-40dc-a3f3-72f54d71a050}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\joystick\hidapi">
+      <UniqueIdentifier>{5b68a498-914f-484b-9df2-027e6f676ef4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\joystick\virtual">
+      <UniqueIdentifier>{04c8513d-e2d2-4822-84da-886d22a71c13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\locale">
+      <UniqueIdentifier>{1a7fe9ef-4850-4a4a-88ff-f51bd756208b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\misc">
+      <UniqueIdentifier>{be5186ba-d883-41e8-a441-e0eb83af3a47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\thread\pthread">
+      <UniqueIdentifier>{103f9cba-2fdf-4443-b5cf-367c079e77f4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\SDL.c">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\SDL_assert.c">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\SDL_error.c">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\SDL_hints.c">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\SDL_log.c">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\audio\SDL_audio.c">
-      <Filter>src\audio</Filter>
-    </ClCompile>
-    <ClCompile Include="src\audio\SDL_audiocvt.c">
-      <Filter>src\audio</Filter>
-    </ClCompile>
-    <ClCompile Include="src\audio\SDL_audiodev.c">
-      <Filter>src\audio</Filter>
-    </ClCompile>
-    <ClCompile Include="src\audio\SDL_audiotypecvt.c">
-      <Filter>src\audio</Filter>
-    </ClCompile>
-    <ClCompile Include="src\audio\SDL_mixer.c">
-      <Filter>src\audio</Filter>
-    </ClCompile>
-    <ClCompile Include="src\audio\SDL_wave.c">
-      <Filter>src\audio</Filter>
-    </ClCompile>
-    <ClCompile Include="src\audio\android\SDL_androidaudio.c">
-      <Filter>src\audio</Filter>
-    </ClCompile>
-    <ClCompile Include="src\audio\dummy\SDL_dummyaudio.c">
-      <Filter>src\audio</Filter>
-    </ClCompile>
-    <ClCompile Include="src\atomic\SDL_atomic.c">
-      <Filter>src\atomic</Filter>
-    </ClCompile>
-    <ClCompile Include="src\atomic\SDL_spinlock.c">
-      <Filter>src\atomic</Filter>
-    </ClCompile>
-    <ClCompile Include="src\core\android\SDL_android.c">
-      <Filter>src\core</Filter>
-    </ClCompile>
-    <ClCompile Include="src\cpuinfo\SDL_cpuinfo.c">
-      <Filter>src\cpuinfo</Filter>
-    </ClCompile>
-    <ClCompile Include="src\dynapi\SDL_dynapi.c">
-      <Filter>src\dynapi</Filter>
-    </ClCompile>
-    <ClCompile Include="src\events\SDL_clipboardevents.c">
-      <Filter>src\events</Filter>
-    </ClCompile>
-    <ClCompile Include="src\events\SDL_dropevents.c">
-      <Filter>src\events</Filter>
-    </ClCompile>
-    <ClCompile Include="src\events\SDL_events.c">
-      <Filter>src\events</Filter>
-    </ClCompile>
-    <ClCompile Include="src\events\SDL_gesture.c">
-      <Filter>src\events</Filter>
-    </ClCompile>
-    <ClCompile Include="src\events\SDL_keyboard.c">
-      <Filter>src\events</Filter>
-    </ClCompile>
-    <ClCompile Include="src\events\SDL_mouse.c">
-      <Filter>src\events</Filter>
-    </ClCompile>
-    <ClCompile Include="src\events\SDL_quit.c">
-      <Filter>src\events</Filter>
-    </ClCompile>
-    <ClCompile Include="src\events\SDL_touch.c">
-      <Filter>src\events</Filter>
-    </ClCompile>
-    <ClCompile Include="src\events\SDL_windowevents.c">
-      <Filter>src\events</Filter>
-    </ClCompile>
-    <ClCompile Include="src\file\SDL_rwops.c">
-      <Filter>src\file</Filter>
-    </ClCompile>
-    <ClCompile Include="src\haptic\SDL_haptic.c">
-      <Filter>src\haptic</Filter>
-    </ClCompile>
-    <ClCompile Include="src\joystick\SDL_gamecontroller.c">
-      <Filter>src\joystick</Filter>
-    </ClCompile>
-    <ClCompile Include="src\joystick\SDL_joystick.c">
-      <Filter>src\joystick</Filter>
-    </ClCompile>
-    <ClCompile Include="src\joystick\android\SDL_sysjoystick.c">
-      <Filter>src\joystick</Filter>
-    </ClCompile>
-    <ClCompile Include="src\loadso\dlopen\SDL_sysloadso.c">
-      <Filter>src\dlopen</Filter>
-    </ClCompile>
-    <ClCompile Include="src\power\SDL_power.c">
-      <Filter>src\power</Filter>
-    </ClCompile>
-    <ClCompile Include="src\power\android\SDL_syspower.c">
-      <Filter>src\power</Filter>
-    </ClCompile>
-    <ClCompile Include="src\filesystem\android\SDL_sysfilesystem.c">
-      <Filter>src\filesystem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\render\SDL_d3dmath.c">
-      <Filter>src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="src\render\SDL_render.c">
-      <Filter>src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="src\render\SDL_yuv_sw.c">
-      <Filter>src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="src\render\direct3d\SDL_render_d3d.c">
-      <Filter>src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="src\render\direct3d11\SDL_render_d3d11.c">
-      <Filter>src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="src\render\opengl\SDL_render_gl.c">
-      <Filter>src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="src\render\opengl\SDL_shaders_gl.c">
-      <Filter>src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="src\render\opengles\SDL_render_gles.c">
-      <Filter>src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="src\render\opengles2\SDL_render_gles2.c">
-      <Filter>src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="src\render\opengles2\SDL_shaders_gles2.c">
-      <Filter>src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="src\render\psp\SDL_render_psp.c">
-      <Filter>src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="src\render\software\SDL_blendfillrect.c">
-      <Filter>src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="src\render\software\SDL_blendline.c">
-      <Filter>src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="src\render\software\SDL_blendpoint.c">
-      <Filter>src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="src\render\software\SDL_drawline.c">
-      <Filter>src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="src\render\software\SDL_drawpoint.c">
-      <Filter>src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="src\render\software\SDL_render_sw.c">
-      <Filter>src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="src\render\software\SDL_rotate.c">
-      <Filter>src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="src\stdlib\SDL_getenv.c">
-      <Filter>src\stdlib</Filter>
-    </ClCompile>
-    <ClCompile Include="src\stdlib\SDL_iconv.c">
-      <Filter>src\stdlib</Filter>
-    </ClCompile>
-    <ClCompile Include="src\stdlib\SDL_malloc.c">
-      <Filter>src\stdlib</Filter>
-    </ClCompile>
-    <ClCompile Include="src\stdlib\SDL_qsort.c">
-      <Filter>src\stdlib</Filter>
-    </ClCompile>
-    <ClCompile Include="src\stdlib\SDL_stdlib.c">
-      <Filter>src\stdlib</Filter>
-    </ClCompile>
-    <ClCompile Include="src\stdlib\SDL_string.c">
-      <Filter>src\stdlib</Filter>
-    </ClCompile>
-    <ClCompile Include="src\thread\SDL_thread.c">
-      <Filter>src\thread</Filter>
-    </ClCompile>
-    <ClCompile Include="src\thread\pthread\SDL_syscond.c">
-      <Filter>src\thread</Filter>
-    </ClCompile>
-    <ClCompile Include="src\thread\pthread\SDL_sysmutex.c">
-      <Filter>src\thread</Filter>
-    </ClCompile>
-    <ClCompile Include="src\thread\pthread\SDL_syssem.c">
-      <Filter>src\thread</Filter>
-    </ClCompile>
-    <ClCompile Include="src\thread\pthread\SDL_systhread.c">
-      <Filter>src\thread</Filter>
-    </ClCompile>
-    <ClCompile Include="src\thread\pthread\SDL_systls.c">
-      <Filter>src\thread</Filter>
-    </ClCompile>
-    <ClCompile Include="src\timer\SDL_timer.c">
-      <Filter>src\timer</Filter>
-    </ClCompile>
-    <ClCompile Include="src\timer\unix\SDL_systimer.c">
-      <Filter>src\timer</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\SDL_blit.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\SDL_blit_0.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\SDL_blit_1.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\SDL_blit_A.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\SDL_blit_auto.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\SDL_blit_copy.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\SDL_blit_N.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\SDL_blit_slow.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\SDL_bmp.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\SDL_clipboard.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\SDL_egl.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\SDL_fillrect.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\SDL_pixels.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\SDL_rect.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\SDL_RLEaccel.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\SDL_shape.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\SDL_stretch.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\SDL_surface.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\SDL_video.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\android\SDL_androidclipboard.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\android\SDL_androidevents.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\android\SDL_androidgl.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\android\SDL_androidkeyboard.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\android\SDL_androidmessagebox.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\android\SDL_androidmouse.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\android\SDL_androidtouch.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\android\SDL_androidvideo.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\android\SDL_androidwindow.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\test\SDL_test_assert.c">
-      <Filter>src\test</Filter>
-    </ClCompile>
-    <ClCompile Include="src\test\SDL_test_common.c">
-      <Filter>src\test</Filter>
-    </ClCompile>
-    <ClCompile Include="src\test\SDL_test_compare.c">
-      <Filter>src\test</Filter>
-    </ClCompile>
-    <ClCompile Include="src\test\SDL_test_crc32.c">
-      <Filter>src\test</Filter>
-    </ClCompile>
-    <ClCompile Include="src\test\SDL_test_font.c">
-      <Filter>src\test</Filter>
-    </ClCompile>
-    <ClCompile Include="src\test\SDL_test_fuzzer.c">
-      <Filter>src\test</Filter>
-    </ClCompile>
-    <ClCompile Include="src\test\SDL_test_harness.c">
-      <Filter>src\test</Filter>
-    </ClCompile>
-    <ClCompile Include="src\test\SDL_test_imageBlit.c">
-      <Filter>src\test</Filter>
-    </ClCompile>
-    <ClCompile Include="src\test\SDL_test_imageBlitBlend.c">
-      <Filter>src\test</Filter>
-    </ClCompile>
-    <ClCompile Include="src\test\SDL_test_imageFace.c">
-      <Filter>src\test</Filter>
-    </ClCompile>
-    <ClCompile Include="src\test\SDL_test_imagePrimitives.c">
-      <Filter>src\test</Filter>
-    </ClCompile>
-    <ClCompile Include="src\test\SDL_test_imagePrimitivesBlend.c">
-      <Filter>src\test</Filter>
-    </ClCompile>
-    <ClCompile Include="src\test\SDL_test_log.c">
-      <Filter>src\test</Filter>
-    </ClCompile>
-    <ClCompile Include="src\test\SDL_test_md5.c">
-      <Filter>src\test</Filter>
-    </ClCompile>
-    <ClCompile Include="src\test\SDL_test_random.c">
-      <Filter>src\test</Filter>
-    </ClCompile>
-    <ClCompile Include="src\SDL_dataqueue.c">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\events\SDL_displayevents.c">
-      <Filter>src\events</Filter>
-    </ClCompile>
-    <ClCompile Include="src\sensor\SDL_sensor.c">
-      <Filter>src\sensor</Filter>
-    </ClCompile>
-    <ClCompile Include="src\sensor\android\SDL_androidsensor.c">
-      <Filter>src\sensor</Filter>
-    </ClCompile>
-    <ClCompile Include="src\test\SDL_test_memory.c">
-      <Filter>src\test</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\android\SDL_androidvulkan.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\SDL_vulkan_utils.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\SDL_yuv.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\video\yuv2rgb\yuv_rgb.c">
-      <Filter>src\video</Filter>
-    </ClCompile>
-    <ClCompile Include="src\haptic\android\SDL_syshaptic.c">
-      <Filter>src\haptic</Filter>
-    </ClCompile>
-    <ClCompile Include="src\hidapi\android\hid.cpp">
-      <Filter>src\hidapi</Filter>
-    </ClCompile>
-    <ClCompile Include="src\joystick\hidapi\SDL_hidapijoystick.c">
-      <Filter>src\joystick</Filter>
-    </ClCompile>
-    <ClCompile Include="src\joystick\hidapi\SDL_hidapi_ps4.c">
-      <Filter>src\joystick</Filter>
-    </ClCompile>
-    <ClCompile Include="src\joystick\hidapi\SDL_hidapi_switch.c">
-      <Filter>src\joystick</Filter>
-    </ClCompile>
-    <ClCompile Include="src\joystick\hidapi\SDL_hidapi_xbox360.c">
-      <Filter>src\joystick</Filter>
-    </ClCompile>
-    <ClCompile Include="src\joystick\hidapi\SDL_hidapi_xboxone.c">
-      <Filter>src\joystick</Filter>
-    </ClCompile>
-    <ClCompile Include="src\audio\openslES\SDL_openslES.c">
-      <Filter>src\audio</Filter>
-    </ClCompile>
-    <ClCompile Include="src\joystick\hidapi\SDL_hidapi_gamecube.c">
-      <Filter>src\joystick</Filter>
-    </ClCompile>
     <ClCompile Include="src\cpufeatures\cpu-features.c">
       <Filter>src\cpufeatures</Filter>
     </ClCompile>
-    <ClCompile Include="src\joystick\hidapi\SDL_hidapi_xbox360w.c" />
-    <ClCompile Include="src\stdlib\SDL_strtokr.c" />
+    <ClCompile Include="..\libsdl\SDL\src\SDL.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\SDL_assert.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\SDL_dataqueue.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\SDL_error.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\SDL_hints.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\SDL_log.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\atomic\SDL_spinlock.c">
+      <Filter>src\atomic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\atomic\SDL_atomic.c">
+      <Filter>src\atomic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\audio\SDL_audio.c">
+      <Filter>src\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\audio\SDL_audiocvt.c">
+      <Filter>src\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\audio\SDL_audiodev.c">
+      <Filter>src\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\audio\SDL_audiotypecvt.c">
+      <Filter>src\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\audio\SDL_mixer.c">
+      <Filter>src\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\audio\SDL_wave.c">
+      <Filter>src\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\core\android\SDL_android.c">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\cpuinfo\SDL_cpuinfo.c">
+      <Filter>src\cpuinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\dynapi\SDL_dynapi.c">
+      <Filter>src\dynapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\loadso\dlopen\SDL_sysloadso.c">
+      <Filter>src\loadso</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\events\SDL_clipboardevents.c">
+      <Filter>src\events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\events\SDL_displayevents.c">
+      <Filter>src\events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\events\SDL_dropevents.c">
+      <Filter>src\events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\events\SDL_events.c">
+      <Filter>src\events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\events\SDL_gesture.c">
+      <Filter>src\events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\events\SDL_keyboard.c">
+      <Filter>src\events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\events\SDL_mouse.c">
+      <Filter>src\events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\events\SDL_quit.c">
+      <Filter>src\events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\events\SDL_touch.c">
+      <Filter>src\events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\events\SDL_windowevents.c">
+      <Filter>src\events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\file\SDL_rwops.c">
+      <Filter>src\file</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\filesystem\android\SDL_sysfilesystem.c">
+      <Filter>src\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\haptic\android\SDL_syshaptic.c">
+      <Filter>src\haptic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\haptic\SDL_haptic.c">
+      <Filter>src\haptic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\hidapi\android\hid.cpp">
+      <Filter>src\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\joystick\SDL_gamecontroller.c">
+      <Filter>src\joystick</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\joystick\SDL_joystick.c">
+      <Filter>src\joystick</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\joystick\android\SDL_sysjoystick.c">
+      <Filter>src\joystick</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\joystick\hidapi\SDL_hidapi_gamecube.c">
+      <Filter>src\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\joystick\hidapi\SDL_hidapi_ps4.c">
+      <Filter>src\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\joystick\hidapi\SDL_hidapi_ps5.c">
+      <Filter>src\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\joystick\hidapi\SDL_hidapi_rumble.c">
+      <Filter>src\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\joystick\hidapi\SDL_hidapi_steam.c">
+      <Filter>src\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\joystick\hidapi\SDL_hidapi_switch.c">
+      <Filter>src\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\joystick\hidapi\SDL_hidapi_xbox360.c">
+      <Filter>src\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\joystick\hidapi\SDL_hidapi_xbox360w.c">
+      <Filter>src\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\joystick\hidapi\SDL_hidapi_xboxone.c">
+      <Filter>src\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\joystick\hidapi\SDL_hidapijoystick.c">
+      <Filter>src\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\joystick\virtual\SDL_virtualjoystick.c">
+      <Filter>src\joystick\virtual</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\locale\SDL_locale.c">
+      <Filter>src\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\locale\android\SDL_syslocale.c">
+      <Filter>src\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\misc\SDL_url.c">
+      <Filter>src\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\misc\android\SDL_sysurl.c">
+      <Filter>src\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\power\SDL_power.c">
+      <Filter>src\power</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\power\android\SDL_syspower.c">
+      <Filter>src\power</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\sensor\SDL_sensor.c">
+      <Filter>src\sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\sensor\android\SDL_androidsensor.c">
+      <Filter>src\sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\stdlib\SDL_crc32.c">
+      <Filter>src\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\stdlib\SDL_getenv.c">
+      <Filter>src\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\stdlib\SDL_iconv.c">
+      <Filter>src\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\stdlib\SDL_malloc.c">
+      <Filter>src\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\stdlib\SDL_qsort.c">
+      <Filter>src\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\stdlib\SDL_stdlib.c">
+      <Filter>src\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\stdlib\SDL_string.c">
+      <Filter>src\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\stdlib\SDL_strtokr.c">
+      <Filter>src\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\thread\SDL_thread.c">
+      <Filter>src\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\timer\SDL_timer.c">
+      <Filter>src\timer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\SDL_blit.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\SDL_blit_0.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\SDL_blit_1.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\SDL_blit_A.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\SDL_blit_auto.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\SDL_blit_copy.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\SDL_blit_N.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\SDL_blit_slow.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\SDL_bmp.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\SDL_clipboard.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\SDL_egl.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\SDL_fillrect.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\SDL_pixels.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\SDL_rect.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\SDL_RLEaccel.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\SDL_shape.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\SDL_stretch.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\SDL_surface.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\SDL_video.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\SDL_vulkan_utils.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\SDL_yuv.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\android\SDL_androidclipboard.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\android\SDL_androidevents.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\android\SDL_androidgl.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\android\SDL_androidkeyboard.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\android\SDL_androidmessagebox.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\android\SDL_androidmouse.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\android\SDL_androidtouch.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\android\SDL_androidvideo.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\android\SDL_androidvulkan.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\android\SDL_androidwindow.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\audio\android\SDL_androidaudio.c">
+      <Filter>src\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\audio\dummy\SDL_dummyaudio.c">
+      <Filter>src\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\audio\openslES\SDL_openslES.c">
+      <Filter>src\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\thread\pthread\SDL_systls.c">
+      <Filter>src\thread\pthread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\thread\pthread\SDL_syscond.c">
+      <Filter>src\thread\pthread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\thread\pthread\SDL_sysmutex.c">
+      <Filter>src\thread\pthread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\thread\pthread\SDL_syssem.c">
+      <Filter>src\thread\pthread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\thread\pthread\SDL_systhread.c">
+      <Filter>src\thread\pthread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\timer\unix\SDL_systimer.c">
+      <Filter>src\timer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\video\yuv2rgb\yuv_rgb.c">
+      <Filter>src\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\test\SDL_test_assert.c">
+      <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\test\SDL_test_common.c">
+      <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\test\SDL_test_compare.c">
+      <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\test\SDL_test_crc32.c">
+      <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\test\SDL_test_font.c">
+      <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\test\SDL_test_fuzzer.c">
+      <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\test\SDL_test_harness.c">
+      <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\test\SDL_test_imageBlit.c">
+      <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\test\SDL_test_imageBlitBlend.c">
+      <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\test\SDL_test_imageFace.c">
+      <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\test\SDL_test_imagePrimitives.c">
+      <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\test\SDL_test_imagePrimitivesBlend.c">
+      <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\test\SDL_test_log.c">
+      <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\test\SDL_test_md5.c">
+      <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\test\SDL_test_memory.c">
+      <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\test\SDL_test_random.c">
+      <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\render\software\SDL_blendfillrect.c">
+      <Filter>src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\render\software\SDL_blendline.c">
+      <Filter>src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\render\software\SDL_blendpoint.c">
+      <Filter>src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\render\SDL_d3dmath.c">
+      <Filter>src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\render\software\SDL_drawline.c">
+      <Filter>src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\render\software\SDL_drawpoint.c">
+      <Filter>src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\render\SDL_render.c">
+      <Filter>src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\render\direct3d\SDL_render_d3d.c">
+      <Filter>src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\render\direct3d11\SDL_render_d3d11.c">
+      <Filter>src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\render\opengl\SDL_render_gl.c">
+      <Filter>src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\render\opengles\SDL_render_gles.c">
+      <Filter>src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\render\opengles2\SDL_render_gles2.c">
+      <Filter>src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\render\psp\SDL_render_psp.c">
+      <Filter>src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\render\software\SDL_render_sw.c">
+      <Filter>src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\render\software\SDL_rotate.c">
+      <Filter>src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\render\direct3d\SDL_shaders_d3d.c">
+      <Filter>src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\render\direct3d11\SDL_shaders_d3d11.c">
+      <Filter>src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\render\opengl\SDL_shaders_gl.c">
+      <Filter>src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\render\opengles2\SDL_shaders_gles2.c">
+      <Filter>src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL\src\render\SDL_yuv_sw.c">
+      <Filter>src\render</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\begin_code.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_mutex.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\close_code.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_name.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_opengl.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_assert.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_opengl_glext.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_atomic.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_opengles.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_audio.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_opengles2.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_bits.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_opengles2_gl2.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_blendmode.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_opengles2_gl2ext.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_clipboard.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_opengles2_gl2platform.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_config.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_opengles2_khrplatform.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_config_android.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_pixels.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_config_iphoneos.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_platform.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_config_macosx.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_power.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_config_minimal.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_quit.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_config_os2.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_rect.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_config_pandora.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_render.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_config_psp.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_revision.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_config_windows.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_rwops.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_config_winrt.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_scancode.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_config_wiz.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_sensor.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_copying.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_shape.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_cpuinfo.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_stdinc.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_egl.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_surface.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_endian.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_system.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_error.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_syswm.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_events.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_test.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_filesystem.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_test_assert.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_gamecontroller.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_test_common.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_gesture.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_test_compare.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_haptic.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_test_crc32.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_hints.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_test_font.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_joystick.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_test_fuzzer.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_keyboard.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_test_harness.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_keycode.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_test_images.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_loadso.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_test_log.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_log.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_test_md5.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_main.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_test_memory.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_messagebox.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_test_random.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_mouse.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_thread.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_mutex.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_timer.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_name.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_touch.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_opengl.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_types.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_opengl_glext.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_version.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_opengles.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_video.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_opengles2.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_vulkan.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_opengles2_gl2.h">
+    <ClInclude Include="..\libsdl\SDL\include\begin_code.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_opengles2_gl2ext.h">
+    <ClInclude Include="..\libsdl\SDL\include\close_code.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_opengles2_gl2platform.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_opengles2_khrplatform.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_assert.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_pixels.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_atomic.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_platform.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_audio.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_power.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_bits.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_quit.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_blendmode.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_rect.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_clipboard.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_render.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_config.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_revision.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_config_android.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_rwops.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_config_iphoneos.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_scancode.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_config_macosx.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_sensor.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_config_minimal.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_shape.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_config_os2.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_stdinc.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_config_pandora.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_surface.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_config_psp.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_system.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_config_windows.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_syswm.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_config_winrt.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_test.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_config_wiz.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_test_assert.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_copying.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_test_common.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_cpuinfo.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_test_compare.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_egl.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_test_crc32.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_endian.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_test_font.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_error.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_test_fuzzer.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_events.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_test_harness.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_filesystem.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_test_images.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_gamecontroller.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_test_log.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_gesture.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_test_md5.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_haptic.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_test_memory.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_hints.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_test_random.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_joystick.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_thread.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_keyboard.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_timer.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_keycode.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_touch.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_loadso.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_types.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_locale.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_version.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_log.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_video.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_main.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL_vulkan.h">
+    <ClInclude Include="..\libsdl\SDL\include\SDL_messagebox.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libsdl\SDL\include\SDL_metal.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libsdl\SDL\include\SDL_misc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libsdl\SDL\include\SDL_mouse.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>

@@ -3,7 +3,7 @@ apply plugin: 'com.android.model.application'
 model {
     android {
         compileSdkVersion = 26
-        buildToolsVersion = "29.0.2"
+        buildToolsVersion = "30.0.3"
 
         defaultConfig.with {
             applicationId = "com.SDL2_GradleApp"

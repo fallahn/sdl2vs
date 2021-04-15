@@ -2,6 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="..\SDL2\src\main\android\SDL_android_main.c" />
+    <ClCompile Include="..\libsdl\SDL\src\main\android\SDL_android_main.c" />
   </ItemGroup>
 </Project>

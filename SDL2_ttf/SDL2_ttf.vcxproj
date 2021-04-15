@@ -35,56 +35,56 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\freetype\autofit\autofit.c" />
-    <ClCompile Include="src\freetype\base\ftbase.c" />
-    <ClCompile Include="src\freetype\base\ftbbox.c" />
-    <ClCompile Include="src\freetype\base\ftbdf.c" />
-    <ClCompile Include="src\freetype\base\ftbitmap.c" />
-    <ClCompile Include="src\freetype\base\ftcid.c" />
-    <ClCompile Include="src\freetype\base\ftdebug.c" />
-    <ClCompile Include="src\freetype\base\ftfstype.c" />
-    <ClCompile Include="src\freetype\base\ftgasp.c" />
-    <ClCompile Include="src\freetype\base\ftglyph.c" />
-    <ClCompile Include="src\freetype\base\ftgxval.c" />
-    <ClCompile Include="src\freetype\base\ftinit.c" />
-    <ClCompile Include="src\freetype\base\ftmm.c" />
-    <ClCompile Include="src\freetype\base\ftotval.c" />
-    <ClCompile Include="src\freetype\base\ftpatent.c" />
-    <ClCompile Include="src\freetype\base\ftpfr.c" />
-    <ClCompile Include="src\freetype\base\ftstroke.c" />
-    <ClCompile Include="src\freetype\base\ftsynth.c" />
-    <ClCompile Include="src\freetype\base\ftsystem.c" />
-    <ClCompile Include="src\freetype\base\fttype1.c" />
-    <ClCompile Include="src\freetype\base\ftwinfnt.c" />
-    <ClCompile Include="src\freetype\bdf\bdf.c" />
-    <ClCompile Include="src\freetype\bzip2\ftbzip2.c" />
-    <ClCompile Include="src\freetype\cache\ftcache.c" />
-    <ClCompile Include="src\freetype\cff\cff.c" />
-    <ClCompile Include="src\freetype\cid\type1cid.c" />
-    <ClCompile Include="src\freetype\gzip\ftgzip.c" />
-    <ClCompile Include="src\freetype\lzw\ftlzw.c" />
-    <ClCompile Include="src\freetype\pcf\pcf.c" />
-    <ClCompile Include="src\freetype\pfr\pfr.c" />
-    <ClCompile Include="src\freetype\psaux\psaux.c" />
-    <ClCompile Include="src\freetype\pshinter\pshinter.c" />
-    <ClCompile Include="src\freetype\psnames\psmodule.c" />
-    <ClCompile Include="src\freetype\raster\raster.c" />
-    <ClCompile Include="src\freetype\sfnt\sfnt.c" />
-    <ClCompile Include="src\freetype\smooth\smooth.c" />
-    <ClCompile Include="src\freetype\tools\apinames.c" />
-    <ClCompile Include="src\freetype\truetype\truetype.c" />
-    <ClCompile Include="src\freetype\type1\type1.c" />
-    <ClCompile Include="src\freetype\type42\type42.c" />
-    <ClCompile Include="src\freetype\winfonts\winfnt.c" />
-    <ClCompile Include="src\SDL_ttf.c" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\SDL2\SDL2.vcxproj">
       <Project>{b7be417c-b6c5-4a69-a056-e0cb0c6a344c}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\SDL_ttf.h" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\autofit\autofit.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\base\ftbase.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\base\ftbbox.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\base\ftbdf.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\base\ftbitmap.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\base\ftcid.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\base\ftdebug.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\base\ftfstype.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\base\ftgasp.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\base\ftglyph.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\base\ftgxval.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\base\ftinit.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\base\ftmm.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\base\ftotval.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\base\ftpatent.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\base\ftpfr.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\base\ftstroke.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\base\ftsynth.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\base\ftsystem.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\base\fttype1.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\base\ftwinfnt.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\bdf\bdf.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\bzip2\ftbzip2.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\cache\ftcache.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\cff\cff.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\cid\type1cid.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\gzip\ftgzip.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\lzw\ftlzw.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\pcf\pcf.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\pfr\pfr.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\psaux\psaux.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\pshinter\pshinter.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\psnames\psmodule.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\raster\raster.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\sfnt\sfnt.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\smooth\smooth.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\tools\apinames.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\truetype\truetype.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\type1\type1.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\type42\type42.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\external\freetype-2.10.4\src\winfonts\winfnt.c" />
+    <ClCompile Include="..\libsdl\SDL_ttf\SDL_ttf.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\libsdl\SDL_ttf\SDL_ttf.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{8572235c-b335-40dd-ba5f-9954bedc4bfc}</ProjectGuid>
@@ -166,7 +166,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include;src\freetype\include;..\SDL2\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);..\libsdl\SDL_ttf\external\freetype-2.10.4\include;..\libsdl\SDL\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
@@ -177,7 +177,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include;src\freetype\include;..\SDL2\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);..\libsdl\SDL_ttf\external\freetype-2.10.4\include;..\libsdl\SDL\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
@@ -188,7 +188,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include;src\freetype\include;..\SDL2\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);..\libsdl\SDL_ttf\external\freetype-2.10.4\include;..\libsdl\SDL\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include;src\freetype\include;..\SDL2\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);..\libsdl\SDL_ttf\external\freetype-2.10.4\include;..\libsdl\SDL\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
@@ -210,7 +210,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include;src\freetype\include;..\SDL2\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);..\libsdl\SDL_ttf\external\freetype-2.10.4\include;..\libsdl\SDL\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
@@ -221,7 +221,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include;src\freetype\include;..\SDL2\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);..\libsdl\SDL_ttf\external\freetype-2.10.4\include;..\libsdl\SDL\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CppLanguageStandard>c++1z</CppLanguageStandard>
     </ClCompile>
@@ -232,7 +232,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include;src\freetype\include;..\SDL2\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);..\libsdl\SDL_ttf\external\freetype-2.10.4\include;..\libsdl\SDL\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <EnableNeonCodegen>true</EnableNeonCodegen>
       <CppLanguageStandard>c++1z</CppLanguageStandard>
@@ -244,7 +244,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);include;src\freetype\include;..\SDL2\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(Sysroot)\usr\include;$(StlIncludeDirectories)%(AdditionalIncludeDirectories);..\libsdl\SDL_ttf\external\freetype-2.10.4\include;..\libsdl\SDL\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <EnableNeonCodegen>true</EnableNeonCodegen>
       <CppLanguageStandard>c++1z</CppLanguageStandard>
