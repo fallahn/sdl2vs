@@ -3,6 +3,12 @@ SDL2 Template Solution
 
 This solution demonstrates how to set up a basic SDL2 project for Android in Visual Studio 2019. The solution is explained in detail on [my blog](http://trederia.blogspot.com/2017/03/building-sdl2-for-android-with-visual.html).
 
+## Modifications 2021-4-16
+
+- Updated to use git submodules for SDL2 (since it has now migrated to git)
+
+Once you have cloned this repository use `git submodule update --init` to obtain the source of SDL2, SDL_image and SDL_ttf
+
 ## Modifications 2020-01-15
 
 - Microsoft Visual Studio 2019
