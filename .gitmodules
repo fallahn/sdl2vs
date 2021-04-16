@@ -1,0 +1,12 @@
+[submodule "libsdl/SDL"]
+	path = libsdl/SDL
+	url = https://github.com/libsdl-org/SDL
+	branch = main
+[submodule "libsdl/SDL_ttf"]
+	path = libsdl/SDL_ttf
+	url = https://github.com/libsdl-org/SDL_ttf
+	branch = main
+[submodule "libsdl/SDL_image"]
+	path = libsdl/SDL_image
+	url = https://github.com/libsdl-org/SDL_image
+	branch = main

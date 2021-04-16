@@ -7,269 +7,507 @@
     <Filter Include="src\png">
       <UniqueIdentifier>{7664c67e-0d4a-4d5e-b122-36a2497742e7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\png\arm">
-      <UniqueIdentifier>{ec5cb060-472e-4132-bd1f-c9aa03af1a23}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\jpeg">
       <UniqueIdentifier>{e3460442-db03-4b71-af59-913f2be498cd}</UniqueIdentifier>
     </Filter>
     <Filter Include="include">
       <UniqueIdentifier>{7f66960c-6724-49ee-ac25-55df1b79cb63}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\png\arm">
+      <UniqueIdentifier>{df5b91c8-5153-404c-a491-d05d59339e8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\webp">
+      <UniqueIdentifier>{4512edc5-ff62-4f3f-b834-32e846fe5990}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\webp\dec">
+      <UniqueIdentifier>{cb460206-12e6-47ef-826f-e68560baf9d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\webp\dsp">
+      <UniqueIdentifier>{f0fb2951-fafe-41e6-87f1-4a87fe1d2e2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\webp\utils">
+      <UniqueIdentifier>{3c5541c7-99e4-4585-a8a9-e6ac46449ce8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\zlib">
+      <UniqueIdentifier>{595bf529-d06c-4211-84ac-208be7464a8e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\IMG.c">
+    <ClCompile Include="..\libsdl\SDL_image\IMG.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\IMG_bmp.c">
+    <ClCompile Include="..\libsdl\SDL_image\IMG_bmp.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\IMG_gif.c">
+    <ClCompile Include="..\libsdl\SDL_image\IMG_gif.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\IMG_jpg.c">
+    <ClCompile Include="..\libsdl\SDL_image\IMG_jpg.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\IMG_lbm.c">
+    <ClCompile Include="..\libsdl\SDL_image\IMG_lbm.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\IMG_pcx.c">
+    <ClCompile Include="..\libsdl\SDL_image\IMG_pcx.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\IMG_png.c">
+    <ClCompile Include="..\libsdl\SDL_image\IMG_png.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\IMG_pnm.c">
+    <ClCompile Include="..\libsdl\SDL_image\IMG_pnm.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\IMG_svg.c">
+    <ClCompile Include="..\libsdl\SDL_image\IMG_svg.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\IMG_tga.c">
+    <ClCompile Include="..\libsdl\SDL_image\IMG_tga.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\IMG_tif.c">
+    <ClCompile Include="..\libsdl\SDL_image\IMG_tif.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\IMG_webp.c">
+    <ClCompile Include="..\libsdl\SDL_image\IMG_webp.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\IMG_WIC.c">
+    <ClCompile Include="..\libsdl\SDL_image\IMG_WIC.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\IMG_xcf.c">
+    <ClCompile Include="..\libsdl\SDL_image\IMG_xcf.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\IMG_xpm.c">
+    <ClCompile Include="..\libsdl\SDL_image\IMG_xpm.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\IMG_xv.c">
+    <ClCompile Include="..\libsdl\SDL_image\IMG_xv.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\IMG_xxx.c">
+    <ClCompile Include="..\libsdl\SDL_image\IMG_xxx.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\png\png.c">
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jaricom.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jcapimin.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jcapistd.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jcarith.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jccoefct.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jccolor.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jcdctmgr.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jchuff.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jcinit.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jcmainct.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jcmarker.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jcmaster.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jcomapi.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jcparam.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jcprepct.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jcsample.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jctrans.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jdapimin.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jdapistd.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jdarith.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jdatadst.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jdatasrc.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jdcoefct.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jdcolor.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jddctmgr.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jdhuff.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jdinput.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jdmainct.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jdmarker.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jdmaster.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jdmerge.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jdpostct.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jdsample.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jdtrans.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jerror.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jfdctflt.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jfdctfst.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jfdctint.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jidctflt.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jquant1.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jquant2.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jutils.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jmemmgr.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jmem-android.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libpng-1.6.37\png.c">
       <Filter>src\png</Filter>
     </ClCompile>
-    <ClCompile Include="src\png\pngerror.c">
+    <ClCompile Include="..\libsdl\SDL_image\external\libpng-1.6.37\pngerror.c">
       <Filter>src\png</Filter>
     </ClCompile>
-    <ClCompile Include="src\png\pngget.c">
+    <ClCompile Include="..\libsdl\SDL_image\external\libpng-1.6.37\pngget.c">
       <Filter>src\png</Filter>
     </ClCompile>
-    <ClCompile Include="src\png\pngmem.c">
+    <ClCompile Include="..\libsdl\SDL_image\external\libpng-1.6.37\pngmem.c">
       <Filter>src\png</Filter>
     </ClCompile>
-    <ClCompile Include="src\png\pngpread.c">
+    <ClCompile Include="..\libsdl\SDL_image\external\libpng-1.6.37\pngpread.c">
       <Filter>src\png</Filter>
     </ClCompile>
-    <ClCompile Include="src\png\pngread.c">
+    <ClCompile Include="..\libsdl\SDL_image\external\libpng-1.6.37\pngread.c">
       <Filter>src\png</Filter>
     </ClCompile>
-    <ClCompile Include="src\png\pngrio.c">
+    <ClCompile Include="..\libsdl\SDL_image\external\libpng-1.6.37\pngrio.c">
       <Filter>src\png</Filter>
     </ClCompile>
-    <ClCompile Include="src\png\pngrtran.c">
+    <ClCompile Include="..\libsdl\SDL_image\external\libpng-1.6.37\pngrtran.c">
       <Filter>src\png</Filter>
     </ClCompile>
-    <ClCompile Include="src\png\pngrutil.c">
+    <ClCompile Include="..\libsdl\SDL_image\external\libpng-1.6.37\pngrutil.c">
       <Filter>src\png</Filter>
     </ClCompile>
-    <ClCompile Include="src\png\pngset.c">
+    <ClCompile Include="..\libsdl\SDL_image\external\libpng-1.6.37\pngset.c">
       <Filter>src\png</Filter>
     </ClCompile>
-    <ClCompile Include="src\png\pngtrans.c">
+    <ClCompile Include="..\libsdl\SDL_image\external\libpng-1.6.37\pngtrans.c">
       <Filter>src\png</Filter>
     </ClCompile>
-    <ClCompile Include="src\png\pngwio.c">
+    <ClCompile Include="..\libsdl\SDL_image\external\libpng-1.6.37\pngwio.c">
       <Filter>src\png</Filter>
     </ClCompile>
-    <ClCompile Include="src\png\pngwrite.c">
+    <ClCompile Include="..\libsdl\SDL_image\external\libpng-1.6.37\pngwrite.c">
       <Filter>src\png</Filter>
     </ClCompile>
-    <ClCompile Include="src\png\pngwtran.c">
+    <ClCompile Include="..\libsdl\SDL_image\external\libpng-1.6.37\pngwtran.c">
       <Filter>src\png</Filter>
     </ClCompile>
-    <ClCompile Include="src\png\pngwutil.c">
+    <ClCompile Include="..\libsdl\SDL_image\external\libpng-1.6.37\pngwutil.c">
       <Filter>src\png</Filter>
     </ClCompile>
-    <ClCompile Include="src\png\arm\arm_init.c">
+    <ClCompile Include="..\libsdl\SDL_image\external\libpng-1.6.37\arm\filter_neon_intrinsics.c">
       <Filter>src\png\arm</Filter>
     </ClCompile>
-    <ClCompile Include="src\png\arm\filter_neon_intrinsics.c">
+    <ClCompile Include="..\libsdl\SDL_image\external\libpng-1.6.37\arm\palette_neon_intrinsics.c">
       <Filter>src\png\arm</Filter>
     </ClCompile>
-    <ClCompile Include="src\jpeg\jaricom.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jcapimin.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jcapistd.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jcarith.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jccoefct.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jccolor.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jcdctmgr.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jchuff.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jcinit.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jcmainct.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jcmarker.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jcmaster.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jcomapi.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jcparam.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jcprepct.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jcsample.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jctrans.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jdapimin.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jdapistd.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jdarith.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jdatadst.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jdatasrc.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jdcoefct.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jdcolor.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jddctmgr.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jdhuff.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jdinput.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jdmainct.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jdmarker.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jdmaster.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jdmerge.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jdpostct.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jdsample.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jdtrans.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jerror.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jfdctflt.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jfdctfst.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jfdctint.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jidctflt.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jidctfst.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jidctint.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jmem-android.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jmemmgr.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jquant2.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jutils.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\jpeg\jquant1.c">
-      <Filter>src\jpeg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\png\arm\palette_neon_intrinsics.c">
+    <ClCompile Include="..\libsdl\SDL_image\external\libpng-1.6.37\arm\arm_init.c">
       <Filter>src\png\arm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jidctfst.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\jpeg-9d\jidctint.c">
+      <Filter>src\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dec\webp_dec.c">
+      <Filter>src\webp\dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dec\alpha_dec.c">
+      <Filter>src\webp\dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dec\buffer_dec.c">
+      <Filter>src\webp\dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dec\frame_dec.c">
+      <Filter>src\webp\dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dec\idec_dec.c">
+      <Filter>src\webp\dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dec\io_dec.c">
+      <Filter>src\webp\dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dec\quant_dec.c">
+      <Filter>src\webp\dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dec\tree_dec.c">
+      <Filter>src\webp\dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dec\vp8_dec.c">
+      <Filter>src\webp\dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dec\vp8l_dec.c">
+      <Filter>src\webp\dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\alpha_processing_mips_dsp_r2.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\alpha_processing.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\alpha_processing_sse41.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\alpha_processing_neon.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\alpha_processing_sse2.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\cpu.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\dec.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\dec_clip_tables.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\dec_mips_dsp_r2.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\dec_mips32.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\dec_msa.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\dec_neon.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\dec_sse2.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\dec_sse41.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\filters.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\filters_mips_dsp_r2.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\filters_msa.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\filters_neon.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\filters_sse2.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\lossless_mips_dsp_r2.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\lossless_msa.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\lossless_neon.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\lossless_sse2.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\lossless.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\rescaler.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\rescaler_mips_dsp_r2.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\rescaler_mips32.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\rescaler_msa.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\rescaler_neon.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\rescaler_sse2.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\upsampling.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\upsampling_mips_dsp_r2.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\upsampling_msa.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\upsampling_neon.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\upsampling_sse2.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\upsampling_sse41.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\yuv.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\yuv_mips_dsp_r2.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\yuv_mips32.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\yuv_neon.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\yuv_sse2.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\dsp\yuv_sse41.c">
+      <Filter>src\webp\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\utils\bit_reader_utils.c">
+      <Filter>src\webp\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\utils\color_cache_utils.c">
+      <Filter>src\webp\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\utils\filters_utils.c">
+      <Filter>src\webp\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\utils\huffman_utils.c">
+      <Filter>src\webp\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\utils\quant_levels_dec_utils.c">
+      <Filter>src\webp\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\utils\thread_utils.c">
+      <Filter>src\webp\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\utils\utils.c">
+      <Filter>src\webp\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\utils\random_utils.c">
+      <Filter>src\webp\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\libwebp-1.0.3\src\utils\rescaler_utils.c">
+      <Filter>src\webp\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\zlib-1.2.11\adler32.c">
+      <Filter>src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\zlib-1.2.11\compress.c">
+      <Filter>src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\zlib-1.2.11\crc32.c">
+      <Filter>src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\zlib-1.2.11\deflate.c">
+      <Filter>src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\zlib-1.2.11\gzclose.c">
+      <Filter>src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\zlib-1.2.11\gzlib.c">
+      <Filter>src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\zlib-1.2.11\gzread.c">
+      <Filter>src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\zlib-1.2.11\gzwrite.c">
+      <Filter>src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\zlib-1.2.11\infback.c">
+      <Filter>src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\zlib-1.2.11\inffast.c">
+      <Filter>src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\zlib-1.2.11\inflate.c">
+      <Filter>src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\zlib-1.2.11\inftrees.c">
+      <Filter>src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\zlib-1.2.11\trees.c">
+      <Filter>src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\zlib-1.2.11\uncompr.c">
+      <Filter>src\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libsdl\SDL_image\external\zlib-1.2.11\zutil.c">
+      <Filter>src\zlib</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\SDL_image.h">
+    <ClInclude Include="..\libsdl\SDL_image\SDL_image.h">
       <Filter>include</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="src\png\arm\filter_neon.S">
-      <Filter>src\png\arm</Filter>
-    </None>
   </ItemGroup>
 </Project>

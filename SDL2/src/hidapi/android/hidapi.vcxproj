@@ -35,7 +35,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="hid.cpp" />
+    <ClCompile Include="..\..\..\..\libsdl\SDL\src\hidapi\android\hid.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{654d6f15-267a-423d-8606-351c153c4e3d}</ProjectGuid>
